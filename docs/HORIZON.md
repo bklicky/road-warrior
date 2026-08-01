@@ -1,0 +1,15 @@
+# Road Warrior Horizon
+
+- Version: 0.1
+- Status: Captured; not designed
+- Date: 2026-08-01
+
+The Horizon records future possibilities without designing them.
+
+- Ambient listening.
+- Optional always-on modes.
+- Connectors, MCPs, APIs, webhooks, and orchestration across other systems.
+- Calendar, Gmail, Google Docs, GitHub, task systems, and other integrations.
+- Delegated execution.
+- Coordination with specialized AIs and existing workflows.
+- Road Warrior should prefer orchestration over recreating existing systems.
