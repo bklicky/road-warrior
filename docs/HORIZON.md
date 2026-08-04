@@ -13,3 +13,18 @@ The Horizon records future possibilities without designing them.
 - Delegated execution.
 - Coordination with specialized AIs and existing workflows.
 - Road Warrior should prefer orchestration over recreating existing systems.
+
+## Context Engine
+
+Future research only.
+
+### Questions
+
+- Representing contexts.
+- Multiple contexts.
+- Ranking contexts.
+- Contextual opportunities.
+- Delayed clarification.
+- Learned contexts with explicit permission.
+- Orchestration opportunities.
+- Privacy considerations.

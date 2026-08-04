@@ -22,3 +22,11 @@
 - Authority must lag behind trust.
 - Understanding must deepen over time.
 - Every new capability should feel like adding a musician to an orchestra, not rebuilding the concert hall.
+
+## Context Before Clock
+
+- Prefer contextual triggers over temporal triggers whenever context better represents the moment information becomes valuable.
+- Time is only one possible context.
+- Contexts may include people, places, projects, conversations, activities, events, and combinations of them.
+- Information should return when it becomes useful, not merely when it becomes due.
+- The objective is to reopen collaboration rather than merely replay stored information.

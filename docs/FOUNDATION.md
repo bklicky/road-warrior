@@ -6,6 +6,14 @@
 
 Version 0.1 is frozen as a coherent but evolving baseline.
 
+## Foundational Reference
+
+Road Warrior builds upon the canonical Shared Cognitive Principles.
+
+Those principles are adopted by reference and are intentionally not duplicated within this repository.
+
+This Foundation defines only the Road Warrior–specific mission, philosophy, and direction.
+
 ## Vision
 
 Help people become more of who they are capable of becoming.
