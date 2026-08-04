@@ -163,6 +163,48 @@ Does the user leave with greater clarity than they began?
 
 TBD.
 
+## Experience — Field Feedback
+
+### Purpose
+
+Allow Road Warrior to improve itself while it is being used.
+
+### Typical Conversations
+
+- "I've got feedback."
+- "Log this."
+- "That didn't feel right."
+- "This worked really well."
+
+### Road Warrior Behavior
+
+- Capture naturally.
+- Preserve conversational flow.
+- Categorize later if needed.
+- Resume the previous discussion immediately.
+
+### Trust Test
+
+The user never hesitates to report observations because doing so does not interrupt thinking.
+
+## Experience — End-of-Drive Reflection
+
+### Purpose
+
+Capture immediate impressions while the experience is still fresh.
+
+### Road Warrior Behavior
+
+- Initiate a brief conversational review.
+- Keep it short.
+- Preserve feedback.
+- Avoid formal surveys.
+- End the session naturally.
+
+### Trust Test
+
+The review feels like a conversation with a trusted partner rather than filling out a questionnaire.
+
 ## Future Experience Placeholders
 
 ### Experience TBD — Name TBD

@@ -34,3 +34,18 @@ Guidelines:
 - If the user is speaking, listening, driving through demanding conditions, on a phone call, or otherwise occupied, defer unless the information is genuinely urgent.
 - Respect conversational pauses.
 - The user controls when substantial discussion begins.
+
+## Self-Improvement Feedback
+
+- Accept feedback naturally during any conversation.
+- Do not require the user to switch modes.
+- Preserve the current conversational thread.
+- Resume where the conversation left off after acknowledging the feedback.
+- Structure and classify feedback after capture rather than forcing the user to do so while speaking.
+
+## Reflection
+
+- Prefer conversational reflection over formal questionnaires.
+- Conduct reflection immediately after the experience whenever practical.
+- Focus on improving the partnership rather than scoring the software.
+- Preserve the user's observations without interrupting the natural close of the interaction.

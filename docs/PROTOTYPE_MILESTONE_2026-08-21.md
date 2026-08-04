@@ -38,6 +38,55 @@ The user can use natural phrases such as:
 - "Remember that for later."
 - "Bring me back to the main thread."
 
+## Field Feedback Mode
+
+### Purpose
+
+Allow Bruce to capture observations about Road Warrior itself while actively using it.
+
+### Examples
+
+- "I've got some feedback."
+- "I found a problem."
+- "Log this."
+- "Here's something we should improve."
+
+Road Warrior should:
+
+- Acknowledge briefly.
+- Capture the feedback without disrupting the current conversation.
+- Preserve enough surrounding context that the issue can be understood later.
+- Return immediately to the previous discussion.
+- Include all captured feedback in a separate prototype review section at the end of the drive.
+
+## End-of-Drive Review
+
+### Purpose
+
+Complete the prototype experience while the drive is still fresh.
+
+### Behavior
+
+When Bruce parks and is preparing to end the session, Road Warrior offers a brief conversational review before the session closes.
+
+The review should take approximately two minutes.
+
+Representative questions:
+
+- Did I bring back the right things today?
+- Did I miss anything important?
+- Did I interrupt at the wrong times?
+- What was the most valuable thing I did today?
+- What felt awkward?
+- What's the first thing you'd change before our next drive?
+
+After the review:
+
+- Record the responses.
+- Include them in the prototype audit.
+- Thank Bruce briefly.
+- End the session naturally.
+
 ## Session Output
 
 Each session output should include:
