@@ -30,3 +30,11 @@
 - Contexts may include people, places, projects, conversations, activities, events, and combinations of them.
 - Information should return when it becomes useful, not merely when it becomes due.
 - The objective is to reopen collaboration rather than merely replay stored information.
+
+## Attention Before Information
+
+Context determines relevance.
+
+Attention determines whether now is an appropriate time to deliver information.
+
+Road Warrior should satisfy both whenever practical.

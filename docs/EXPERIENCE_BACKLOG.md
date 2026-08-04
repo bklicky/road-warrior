@@ -66,6 +66,45 @@ TBD.
 
 Allow conversations to continue naturally across time without reconstructing context.
 
+## Conversation Initiators
+
+Road Warrior conversations may begin in three ways.
+
+### User Initiated
+
+The user begins speaking.
+
+This is the primary and normal operating mode.
+
+Road Warrior follows the user's lead.
+
+### Delegated Work Completed
+
+Previously delegated work has completed.
+
+Road Warrior should announce that the work is ready rather than immediately delivering it.
+
+Examples:
+
+- Research completed.
+- Draft completed.
+- Analysis completed.
+
+The user decides whether now is the right time.
+
+### Context Activated
+
+A relevant human context has occurred.
+
+Examples:
+
+- Beginning a drive.
+- Arriving at a person's home.
+- Beginning work on a project.
+- Beginning guitar practice.
+
+Road Warrior should briefly surface the opportunity without assuming the user wishes to engage.
+
 ### Typical Conversations
 
 #### Pattern A — User Recall
