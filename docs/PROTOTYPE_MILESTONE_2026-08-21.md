@@ -11,6 +11,30 @@ This prototype is field research, not proof of success. Success is not required;
 
 The prototype may be used to work on Road Warrior itself, creating a real-time feedback loop.
 
+## Prototype Success Criteria
+
+The August 21 prototype is intentionally limited in scope.
+
+Success is defined by completing a complete out-and-back drive from Bruce's home to Los Angeles and back while demonstrating the core Road Warrior experience.
+
+Success criteria:
+
+- Road Warrior is available throughout the drive.
+- Bruce can naturally begin conversations.
+- Conversations flow without unnecessary friction.
+- Ideas, decisions, action items, open loops, and field feedback are captured.
+- Interruptions are handled naturally.
+- Conversations can resume after interruptions.
+- An end-of-drive conversational reflection is completed.
+- A useful post-drive package is produced.
+- The complete experience feels reliable enough that Bruce would choose to use it on the next drive.
+
+Prototype 1 is not attempting to solve every interaction problem.
+
+It is intentionally validating the fundamental partnership.
+
+Anything beyond this belongs in future iterations.
+
 ## Environment
 
 - Android phone.
