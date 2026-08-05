@@ -13,6 +13,8 @@ This document captures the human experiences Road Warrior is intended to deliver
 
 Remove unnecessary cognitive burden by safely carrying small thoughts, reminders, questions, and commitments.
 
+Once Road Warrior has accepted responsibility for an item, the user should be free to stop carrying it mentally.
+
 ### Lifecycle
 
 - **Capture:** Receive the thought, reminder, question, or commitment without disrupting momentum.
@@ -57,6 +59,16 @@ Does the user immediately stop carrying the thought mentally?
 ### Implementation Notes
 
 TBD.
+
+## Experience — Attention Continuity
+
+### Purpose
+
+Allow the user to remain immersed in the current activity while safely expressing ideas, tasks, questions, and commitments.
+
+### Trust Test
+
+The user does not feel compelled to leave the current activity merely to preserve or route a thought.
 
 ## Experience 001 — Continuity
 

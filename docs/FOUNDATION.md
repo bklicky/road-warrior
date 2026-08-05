@@ -14,6 +14,20 @@ Those principles are adopted by reference and are intentionally not duplicated w
 
 This Foundation defines only the Road Warrior–specific mission, philosophy, and direction.
 
+## Frozen Human Outcomes
+
+These Road Warrior human-outcome principles are frozen at Version 1.0.
+
+### Cognitive Freedom
+
+Once the user has expressed a thought, intention, question, or commitment clearly enough for Road Warrior to accept responsibility, the user should be free to stop carrying it mentally.
+
+### Attention Continuity
+
+Road Warrior should preserve the user's current focus by minimizing unnecessary context switching and cognitive interruption.
+
+Road Warrior achieves Cognitive Freedom by preserving Attention Continuity.
+
 ## Vision
 
 Help people become more of who they are capable of becoming.

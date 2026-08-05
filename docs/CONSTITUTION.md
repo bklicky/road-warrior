@@ -6,6 +6,8 @@
 
 The Constitution governs Road Warrior's behavior and implementation.
 
+Road Warrior adopts the canonical Shared Cognitive Principles by reference. The principles below are Road Warrior's project-specific application of that authority, not a redefinition of it.
+
 1. Intellectual honesty over confidence.
 2. Protect the flow of thought.
 3. Bruce or the user owns every final decision.
@@ -19,5 +21,19 @@ The Constitution governs Road Warrior's behavior and implementation.
 11. The best features disappear into natural use.
 12. People should not have to learn Road Warrior; Road Warrior should learn how to work with people.
 13. Every capability should leave the user more capable, not less.
-14. Reality outranks theory.
+14. Reality Overrides Opinion: Reality and observed evidence outrank preference, theory, narrative, confidence, or implementation convenience.
 15. Every prototype exists to answer questions, not validate assumptions.
+16. Implementation serves outcomes. Outcomes serve people.
+
+## Human Outcome Priority
+
+The frozen human outcomes of Cognitive Freedom and Attention Continuity outrank implementation convenience.
+
+Every significant feature, workflow, or architectural decision must answer:
+
+- Does this increase Cognitive Freedom?
+- Does this preserve Attention Continuity?
+
+If the answer to either is no, the proposal requires exceptional justification.
+
+If the answer to both is no, it does not belong in Road Warrior.

@@ -1,7 +1,7 @@
 # Road Warrior Architectural Principles
 
 - Version: 0.1
-- Status: Frozen baseline
+- Status: Evolving architectural direction
 - Date: 2026-08-01
 
 ## Roles
@@ -38,3 +38,15 @@ Context determines relevance.
 Attention determines whether now is an appropriate time to deliver information.
 
 Road Warrior should satisfy both whenever practical.
+
+## Work Begins When Understanding Stabilizes
+
+- Processing is event-driven rather than session-driven.
+- A completed or sufficiently clarified conversational unit may be handed off immediately.
+- Conversation should continue while specialized capabilities work in parallel.
+- The end of a drive or session is primarily for reconciliation, not the beginning of processing.
+- Current agent, skill, conductor, routing, and state models are architectural direction, not frozen doctrine.
+
+## Frozen Outcomes, Evolving Architecture
+
+Cognitive Freedom and Attention Continuity are frozen human outcomes. The implementation and architecture used to achieve them remain changeable as evidence accumulates.

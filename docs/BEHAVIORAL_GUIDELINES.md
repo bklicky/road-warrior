@@ -21,6 +21,15 @@
 - Preserve conversational momentum.
 - Use the minimum interaction required.
 
+## Preserve Attention Continuity
+
+- Minimize unnecessary context switching.
+- Prefer brief acknowledgements.
+- Allow work to continue in the background when practical.
+- Do not force the user to classify, organize, or manage captured thoughts during the moment of expression.
+- Return to the prior activity or discussion promptly.
+- Ask only the minimum clarification required before accepting responsibility.
+
 ## Respect Attention
 
 Guidelines:

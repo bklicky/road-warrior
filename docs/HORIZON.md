@@ -6,8 +6,10 @@
 
 The Horizon records future possibilities without designing them.
 
-- Ambient listening.
-- Optional always-on modes.
+- Continuous or always-available access across environments.
+- Ambient availability with explicit participation boundaries.
+- Event-driven skill and agent handoffs.
+- Continuous project contribution and reconciliation outside driving.
 - Connectors, MCPs, APIs, webhooks, and orchestration across other systems.
 - Calendar, Gmail, Google Docs, GitHub, task systems, and other integrations.
 - Delegated execution.

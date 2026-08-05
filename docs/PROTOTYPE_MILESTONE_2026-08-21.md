@@ -11,6 +11,15 @@ This prototype is field research, not proof of success. Success is not required;
 
 The prototype may be used to work on Road Warrior itself, creating a real-time feedback loop.
 
+## Scope Clarification
+
+Prototype 1 remains frozen until the August 21 field test.
+
+- Prototype 1 validates Cognitive Freedom and Attention Continuity in the driving environment.
+- The car is the proving ground, not the product.
+- Broader always-available use remains future work.
+- No new capability is added by this clarification.
+
 ## Prototype Success Criteria
 
 The August 21 prototype is intentionally limited in scope.
