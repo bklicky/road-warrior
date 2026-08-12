@@ -1,6 +1,6 @@
 # Road Warrior Decision Log
 
-- Version: 1.1
+- Version: 1.3
 - Status: Living governance record
 - Updated: 2026-08-12
 
@@ -153,8 +153,8 @@ Each entry contains an ID, evidence-supported date, decision, rationale, consequ
 - **Date:** 2026-08-11
 - **Decision:** Context continuity is a V1 requirement across project, person, and conversational threads.
 - **Rationale:** Bruce should not repeatedly reconstruct prior work for Road Warrior to remain a useful cognitive partner.
-- **Consequences:** Capability/reality testing must determine the achievable Prototype 1 boundary; no implementation mechanism is approved yet.
-- **Status:** ACCEPTED — IMPLEMENTATION MECHANISM OPEN
+- **Consequences:** RW-028 approves the shared Markdown handoff ledger as the V1 Context Routing mechanism. Capability/reality testing must still determine the achievable end-to-end Prototype 1 boundary.
+- **Status:** ACCEPTED — V1 MECHANISM SET BY RW-028
 
 ### RW-017 — Treat WhatsApp/Twilio as a Prototype 1 Stretch Goal
 
@@ -165,23 +165,23 @@ Each entry contains an ID, evidence-supported date, decision, rationale, consequ
 - **Consequences:** Work may begin only after core loops are reliable, must not threaten August 20 readiness, and must defer to Version 2 if it cannot be added safely.
 - **Status:** ACCEPTED — STRETCH
 
-### RW-018 — Defer Obsidian Relational Memory to Version 2
+### RW-018 — Defer Relational Knowledge Infrastructure Beyond Prototype 1
 
 - **ID:** RW-018
 - **Date:** 2026-08-11
-- **Decision:** Obsidian relational memory is a Version 2 direction and not a Prototype 1 requirement.
-- **Rationale:** The context-continuity requirement must be validated before selecting a relational-memory implementation.
-- **Consequences:** Prototype 1 must not depend on an Obsidian implementation.
-- **Status:** ACCEPTED — VERSION 2 DIRECTION
+- **Decision:** Relational knowledge infrastructure is not a Prototype 1 requirement. Human-readable relational knowledge such as Obsidian plus semantic retrieval is a V3/V4 research direction, with a graph database considered only if later complexity earns it.
+- **Rationale:** Context and continuity requirements must be validated before selecting deeper relational-memory infrastructure, and infrastructure complexity must be justified by evidence.
+- **Consequences:** Prototype 1 must not depend on Obsidian, semantic retrieval, or graph-database implementation.
+- **Status:** ACCEPTED — V3/V4 RESEARCH DIRECTION
 
-### RW-019 — Defer Personal OS Dashboard Integration to Version 2
+### RW-019 — Defer Personal OS Dashboard Integration Beyond Prototype 1
 
 - **ID:** RW-019
 - **Date:** 2026-08-11
-- **Decision:** Personal OS dashboard integration is a Version 2 direction and not a Prototype 1 requirement.
+- **Decision:** Personal OS dashboard integration is a later direction and not a Prototype 1 requirement. RW-026 records the current V3 Judgment-Driven Personal OS / Dynamic Mission Control direction.
 - **Rationale:** Dashboard integration is not required to validate the Cognitive Partnership.
 - **Consequences:** Prototype 1 scope and readiness must not depend on dashboard work.
-- **Status:** ACCEPTED — VERSION 2 DIRECTION
+- **Status:** ACCEPTED — V3 DIRECTION
 
 ### RW-020 — Synchronize the Repository Before Major Design
 
@@ -225,7 +225,7 @@ Each entry contains an ID, evidence-supported date, decision, rationale, consequ
 - **Date:** 2026-08-11
 - **Decision:** Prototype 1 readiness is targeted for August 20, 2026, and field use begins August 21, 2026.
 - **Rationale:** A readiness freeze before field use protects the core experience from late destabilizing changes.
-- **Consequences:** Core requirements and evidence take priority over stretch work; changes that threaten readiness must be deferred.
+- **Consequences:** Core requirements and evidence take priority over stretch work; changes that threaten readiness must be deferred. August 21 is a milestone for a credible, testable V1 baseline, not perfection.
 - **Status:** ACCEPTED
 
 ### RW-025 — Preserve Context Routing as an Architectural Concept
@@ -234,17 +234,17 @@ Each entry contains an ID, evidence-supported date, decision, rationale, consequ
 - **Date:** 2026-08-12
 - **Decision:** Context Routing means Road Warrior should judge not only whether information should be remembered, but where it belongs and where it should become available later.
 - **Rationale:** Information learned in one Road Warrior context should become available in the relevant project or context without requiring Bruce to act as the courier.
-- **Consequences:** Context Routing is preserved as an architectural concept. No implementation mechanism is selected, and the concept does not establish that context continuity is currently available or proven.
-- **Status:** ACCEPTED — IMPLEMENTATION MECHANISM OPEN
+- **Consequences:** Context Routing is preserved as an architectural concept. RW-028 selects the shared Markdown handoff ledger as its V1 mechanism; end-to-end continuity remains subject to testing.
+- **Status:** ACCEPTED — V1 MECHANISM SET BY RW-028
 
-### RW-026 — Establish Judgment-Driven Mission Control as a Future Direction
+### RW-026 — Establish Judgment-Driven Personal OS / Dynamic Mission Control as a V3 Direction
 
 - **ID:** RW-026
 - **Date:** 2026-08-12
-- **Decision:** Road Warrior should eventually provide the judgment layer above Personal OS, using context, commitments, projects, relationships, priorities, and judgment to determine what deserves attention.
+- **Decision:** In V3, Road Warrior and its Judgment Engine should provide the cognitive prioritization layer above Personal OS, while Personal OS becomes a dynamic presentation and action surface informed by projects, calendar, tasks, investments, trades, communications, and other approved signals.
 - **Rationale:** Static lists or Kanban views should not require Bruce to supply all classification and prioritization manually. The dashboard should display judgment, not create it.
-- **Consequences:** Judgment-Driven Mission Control is a future integration and design direction, not a Prototype 1 implementation requirement. No implementation mechanism is selected.
-- **Status:** ACCEPTED — FUTURE DIRECTION
+- **Consequences:** Judgment-Driven Personal OS / Dynamic Mission Control is not a Prototype 1 implementation requirement. No implementation mechanism is selected, and August 21 scope must not expand to include it.
+- **Status:** ACCEPTED — V3 DIRECTION
 
 ### RW-027 — Order Multiple Intents by Dependency
 
@@ -255,12 +255,83 @@ Each entry contains an ID, evidence-supported date, decision, rationale, consequ
 - **Consequences:** Clarification and execution should address the controlling dependency first while preserving authorization boundaries and avoiding premature downstream action.
 - **Status:** ACCEPTED
 
+### RW-028 — Use a Shared Markdown Handoff Ledger for V1 Context Routing
+
+- **ID:** RW-028
+- **Date:** 2026-08-12
+- **Decision:** The repository-root `ROAD_WARRIOR_HANDOFFS.md` ledger is the approved V1 Context Routing mechanism. Road Warrior creates structured handoff entries, and receiving projects incorporate entries addressed to them and acknowledge receipt.
+- **Rationale:** A shared Markdown ledger provides a simple, inspectable mechanism that removes Bruce from the synchronization path without prematurely introducing software or infrastructure.
+- **Consequences:** V1 uses the status flow `Pending → Received`. The mechanism is intentionally simple and replaceable, but entries must remain structured enough for later migration. Creating a ledger entry does not prove cross-project pickup or acknowledgment; the end-to-end flow must be tested.
+- **Status:** ACCEPTED — END-TO-END TESTING REQUIRED
+
+### RW-029 — Keep Context Judgment Separate From Relational Memory
+
+- **ID:** RW-029
+- **Date:** 2026-08-12
+- **Decision:** Road Warrior remains the judgment and routing layer. A future human-readable relational knowledge layer such as Obsidian, combined with semantic retrieval, may replace or extend the V1 ledger to support cross-project relationships and interconnected concepts, but it would serve as relational memory rather than the source of judgment.
+- **Rationale:** Storage and relationship representation must support Road Warrior's judgment without displacing it or allowing an implementation mechanism to define intent.
+- **Consequences:** V1 does not require Obsidian or semantic-retrieval integration. The Markdown ledger must remain replaceable and structured for possible migration. A graph database remains conditional research and should be introduced only if later complexity earns it.
+- **Status:** ACCEPTED — V3/V4 RESEARCH DIRECTION
+
+### RW-030 — Require Execution Handoff Visibility in V1
+
+- **ID:** RW-030
+- **Date:** 2026-08-12
+- **Decision:** For noticeable-duration V1 work, Road Warrior uses `Accept → Signal → Execute → Close`: briefly accept responsibility, signal real execution, perform the work, and explicitly report completion, blockage, or required input.
+- **Rationale:** Visible responsibility prevents Bruce from wondering whether work was accepted, is still occurring, or silently failed.
+- **Consequences:** Road Warrior must not imply background or continuing execution unless real execution is occurring. Immediate conversational responses do not require ceremonial progress narration.
+- **Status:** ACCEPTED — V1 REQUIREMENT
+
+### RW-031 — Route V1 Obligations by Time and Reject ChatGPT Scheduled Tasks
+
+- **ID:** RW-031
+- **Date:** 2026-08-12
+- **Decision:** Timed obligations route to Google Calendar with a notification; untimed obligations route to Google Tasks as the intended V1 rule. ChatGPT Scheduled Tasks are rejected as a Road Warrior reminder mechanism.
+- **Rationale:** Google Calendar execution succeeded in reality testing. ChatGPT Scheduled Tasks disrupted the primary conversation or chat state and introduced rate-limit friction.
+- **Consequences:** Direct Google Tasks execution remains unproven and must be disclosed as unavailable until verified. Reminder architecture and tests must exclude ChatGPT Scheduled Tasks.
+- **Status:** ACCEPTED — CALENDAR VERIFIED; GOOGLE TASKS UNVERIFIED
+
+### RW-032 — Define External Communication Authorization
+
+- **ID:** RW-032
+- **Date:** 2026-08-12
+- **Decision:** An explicit send instruction authorizes sending, an explicit draft instruction authorizes drafting but not sending, and materially ambiguous authorization requires the smallest clarifying question necessary.
+- **Rationale:** Discussing a communication does not itself transfer authority to act externally.
+- **Consequences:** Road Warrior must not infer send authority from brainstorming, tentative language, or discussion. Actual execution remains subject to verified capability and required confirmation.
+- **Status:** ACCEPTED — V1 REQUIREMENT
+
+### RW-033 — Require Transport-Aware Communication in V1
+
+- **ID:** RW-033
+- **Date:** 2026-08-12
+- **Decision:** Judgment, relationship, and responsibility standards remain consistent across desktop, mobile, and voice, while response length, pacing, structure, turn-taking, and progressive disclosure adapt to transport and attention context.
+- **Rationale:** The cognitive partnership should remain coherent without forcing every environment into the same communication shape.
+- **Consequences:** V1 instructions and testing must cover both invariants and transport-specific delivery behavior.
+- **Status:** ACCEPTED — V1 REQUIREMENT
+
+### RW-034 — Begin Adaptive Communication in V1
+
+- **ID:** RW-034
+- **Date:** 2026-08-12
+- **Decision:** Adaptive Communication is a long-term requirement beginning in V1. Road Warrior should progressively adjust communication behavior from Bruce's explicit and observed feedback.
+- **Rationale:** Communication should improve through use while remaining grounded in evidence.
+- **Consequences:** Individual feedback may guide the current context or form a hypothesis for further testing, but it must not become an unsupported universal assumption.
+- **Status:** ACCEPTED — V1 FOUNDATION; LONG-TERM REQUIREMENT
+
+### RW-035 — Distinguish Contextual Memory From Authoritative Artifacts
+
+- **ID:** RW-035
+- **Date:** 2026-08-12
+- **Decision:** Contextual memory may support judgment, but authoritative artifacts remain necessary when exact wording, quantities, commitments, or other precision matters.
+- **Rationale:** A successful recall can be useful without proving reliable universal cross-project memory or exact source fidelity.
+- **Consequences:** Cross-context recall must be tested further and represented cautiously. Richer bidirectional cross-project information sharing remains later architecture and research, not August 21 scope.
+- **Status:** ACCEPTED — V1 OPERATING BOUNDARY; LATER RESEARCH
+
 ## Superseded Decisions
 
 None recorded.
 
 ## Open Decisions
 
-- The implementation mechanism for V1 context continuity.
-- The verified Prototype 1 capability boundary for Google Drive, reminders/tasks, Gmail drafting and sending, desktop, mobile, and voice behavior.
+- The verified Prototype 1 capability boundary for Google Drive, direct Google Tasks execution, Gmail drafting and sending, desktop, mobile, and voice behavior.
 - Whether WhatsApp/Twilio can proceed without jeopardizing the August 20 readiness target.

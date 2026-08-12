@@ -1,8 +1,8 @@
 # Road Warrior Prototype 1 Implementation Plan
 
-- Version: 1.0
+- Version: 1.2
 - Status: Active
-- Date: 2026-08-11
+- Date: 2026-08-12
 - Readiness target: 2026-08-20
 - Field use begins: 2026-08-21
 
@@ -22,46 +22,46 @@ Statuses are limited to `NOT STARTED`, `IN PROGRESS`, `WAITING`, and `COMPLETE`.
 - **Evidence required:** Approved `PRODUCT_REQUIREMENTS.md` with no material ambiguity about core versus stretch scope.
 - **Status:** NOT STARTED
 
-## C. Capability/Reality Testing
+## C. Capability and Reminder Reality Testing
 
-- **Objective:** Verify the actual capabilities and constraints of ChatGPT, Google Drive, Gmail, reminders/tasks, desktop, mobile, and relevant voice behavior before designing around them.
+- **Objective:** Verify the actual capabilities and constraints of ChatGPT, Google Drive, Gmail, Google Calendar, Google Tasks, desktop, mobile, and relevant voice behavior before designing around them; preserve the rejection of ChatGPT Scheduled Tasks as a reminder mechanism.
 - **Dependencies:** Phase B.
-- **Evidence required:** Repeatable test results recording configuration, observed behavior, failures, confirmation requirements, and capability boundaries.
+- **Evidence required:** Repeatable test results recording configuration, observed behavior, failures, confirmation requirements, and capability boundaries; successful timed-obligation execution through Google Calendar with notification; and an explicit verified or unavailable boundary for direct Google Tasks execution.
 - **Status:** NOT STARTED
 
 ## D. Judgment Specification
 
-- **Objective:** Define observable rules for distinguishing thinking aloud, brainstorming, decisions, delegation, communication, research, and project work, including the Zero Assumptions clarification rule.
+- **Objective:** Define observable rules for conversational states, multiple intents, dependency ordering, external communication authorization, execution handoff visibility, Transport-Aware Communication, Adaptive Communication, and the Zero Assumptions clarification rule.
 - **Dependencies:** Phases B and C.
-- **Evidence required:** Reviewed intent examples, counterexamples, ambiguity cases, expected actions, and minimum clarifying questions.
+- **Evidence required:** Reviewed intent examples, counterexamples, ambiguity cases, dependency cases, expected actions, `Accept → Signal → Execute → Close` cases, transport cases, feedback-adaptation cases, and minimum clarifying questions.
 - **Status:** NOT STARTED
 
 ## E. Prototype Instruction Package
 
-- **Objective:** Create the explicit instruction and reference package that governs Prototype 1 behavior across approved transports.
+- **Objective:** Create the explicit instruction and reference package that governs Prototype 1 judgment, execution visibility, reminder routing, communication authorization, and adaptive transport behavior across approved transports.
 - **Dependencies:** Phases B, C, and D.
 - **Evidence required:** Versioned instruction package with an attachment manifest, setup sequence, operating instructions, and traceability to requirements.
 - **Status:** NOT STARTED
 
 ## F. Core Functional Rehearsal
 
-- **Objective:** Rehearse the Judgment Engine and brainstorm workflow from conversation through summary, Google Drive capture, reminder/task creation, and natural resumption.
+- **Objective:** Rehearse the Judgment Engine and brainstorm workflow from conversation through visible execution handoff, summary, Google Drive capture, correctly routed obligation handling, explicit close, and natural resumption.
 - **Dependencies:** Phase E and verified capabilities from Phase C.
-- **Evidence required:** Successful repeated desktop and mobile runs, retained artifacts, transcripts, timing observations, and documented failures.
+- **Evidence required:** Successful repeated desktop and mobile runs, retained artifacts, transcripts, `Accept → Signal → Execute → Close` observations for noticeable-duration work, correct timed-versus-untimed routing or honest capability disclosure, timing observations, and documented failures.
 - **Status:** NOT STARTED
 
-## G. Context Continuity Testing
+## G. Context Continuity and Routing Testing
 
-- **Objective:** Determine how much project, person, and thread continuity Prototype 1 can preserve without requiring Bruce to reconstruct prior work.
+- **Objective:** Determine how much project, person, and thread continuity Prototype 1 can preserve; test contextual recall against authoritative artifacts; and test the shared Markdown handoff ledger from Road Warrior creation through receiving-project acknowledgment, without requiring Bruce to reconstruct or relay prior work.
 - **Dependencies:** Phases C, D, E, and a stable core loop from Phase F.
-- **Evidence required:** Scenario results across representative contexts, documented continuity gaps, recovery behavior, and an evidence-based Prototype 1 boundary.
+- **Evidence required:** Scenario results across representative contexts; comparison of recalled context with an authoritative artifact when exactness matters; at least one addressed handoff observed moving from `Pending` to `Received` after incorporation by the receiving project; documented pickup, acknowledgment, continuity gaps, and recovery behavior; and an evidence-based Prototype 1 boundary.
 - **Status:** NOT STARTED
 
 ## H. Communication-Return Testing
 
-- **Objective:** Verify that explicit email requests use Gmail appropriately and that Road Warrior returns to the prior conversation without inferring action from tentative language.
+- **Objective:** Verify that explicit send instructions send, explicit draft instructions draft without sending, materially ambiguous authorization triggers the smallest necessary question, and Road Warrior returns to the prior conversation.
 - **Dependencies:** Phases C, D, E, and a stable core loop from Phase F.
-- **Evidence required:** Draft and send-path tests, confirmation behavior, negative tests for non-requests, connector failure handling, and successful conversational resumption.
+- **Evidence required:** Separate draft and send-path tests, ambiguous-authorization tests, confirmation behavior, negative tests for discussion and non-requests, connector failure handling, and successful conversational resumption.
 - **Status:** NOT STARTED
 
 ## I. WhatsApp/Twilio Stretch Evaluation
@@ -73,14 +73,14 @@ Statuses are limited to `NOT STARTED`, `IN PROGRESS`, `WAITING`, and `COMPLETE`.
 
 ## J. Abuse Testing
 
-- **Objective:** Challenge judgment, clarification, capture, communication, continuity, recovery, and transport behavior with ambiguous, interrupted, adversarial, and failure-prone scenarios.
+- **Objective:** Challenge judgment, clarification, capture, communication, execution visibility, continuity, recovery, reminder routing, Transport-Aware Communication, and Adaptive Communication with ambiguous, interrupted, adversarial, and failure-prone scenarios.
 - **Dependencies:** Phases F, G, and H; Phase I only if the stretch goal proceeds.
-- **Evidence required:** Test matrix, observed failures, severity classification, fixes or accepted limitations, and regression results.
+- **Evidence required:** Test matrix, observed failures, severity classification, fixes or accepted limitations, transport comparisons, evidence that feedback is adapted without unsupported generalization, and regression results.
 - **Status:** NOT STARTED
 
 ## K. August 20 Freeze
 
-- **Objective:** Freeze a field-ready Prototype 1 package while protecting the core loop from late destabilizing changes.
+- **Objective:** Freeze a credible, testable Prototype 1 baseline for August 21 while protecting the core loop from late destabilizing changes and excluding V2/V3/V4 expansion.
 - **Dependencies:** Approved requirements and sufficient evidence from Phases C through J; stretch work may be deferred.
 - **Evidence required:** Versioned frozen package, readiness checklist, known limitations, rollback or recovery instructions, and explicit go/no-go decision.
 - **Status:** NOT STARTED

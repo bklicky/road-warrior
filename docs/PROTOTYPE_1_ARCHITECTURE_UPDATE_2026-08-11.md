@@ -9,6 +9,16 @@
 
 This document records the architectural decisions adopted between the August 5 repository state and the August 11 Road Warrior design state. It defines architectural direction and approved workflows without prescribing implementation mechanics.
 
+## Current-State Addendum — 2026-08-12
+
+This remains a historical synchronization record. The living decision log now records these later approvals:
+
+- RW-028 approves `ROAD_WARRIOR_HANDOFFS.md` as the V1 Context Routing mechanism; end-to-end receipt remains unproven and requires testing.
+- RW-018 and RW-029 place the human-readable relational knowledge layer plus semantic retrieval in V3/V4 research, with graph-database use conditional on later earned complexity.
+- RW-019 and RW-026 place Judgment-Driven Personal OS / Dynamic Mission Control in V3, outside Prototype 1.
+
+Where the historical statements below say that the mechanism was unapproved or label these directions as Version 2, the current decision log governs.
+
 ## Decision 1 — Road Warrior Is a Cognitive Operating System
 
 Road Warrior is a Cognitive Operating System.
@@ -73,7 +83,7 @@ This workflow preserves the conversation as the primary human experience while a
 ### Context Continuity — V1 Requirement
 
 - Road Warrior must preserve enough project/person/thread context that Bruce does not repeatedly reconstruct prior work.
-- This requirement applies across Road Warrior, Trade Intelligence, Instagram, Personal OS, music, baking, relationships, and future projects.
+- This requirement applies across Road Warrior, Instagram, Personal OS, music, baking, relationships, and future approved projects.
 - The implementation mechanism is not yet approved.
 - Capability/reality testing must determine what is actually achievable for Prototype 1.
 
