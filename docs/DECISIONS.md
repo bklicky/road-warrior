@@ -1,8 +1,8 @@
 # Road Warrior Decision Log
 
-- Version: 1.0
+- Version: 1.1
 - Status: Living governance record
-- Updated: 2026-08-11
+- Updated: 2026-08-12
 
 This log records accepted product, architecture, and working-governance decisions. A decision remains in force until explicitly superseded. Unresolved implementation mechanisms remain open and are not converted into decisions here.
 
@@ -226,6 +226,33 @@ Each entry contains an ID, evidence-supported date, decision, rationale, consequ
 - **Decision:** Prototype 1 readiness is targeted for August 20, 2026, and field use begins August 21, 2026.
 - **Rationale:** A readiness freeze before field use protects the core experience from late destabilizing changes.
 - **Consequences:** Core requirements and evidence take priority over stretch work; changes that threaten readiness must be deferred.
+- **Status:** ACCEPTED
+
+### RW-025 — Preserve Context Routing as an Architectural Concept
+
+- **ID:** RW-025
+- **Date:** 2026-08-12
+- **Decision:** Context Routing means Road Warrior should judge not only whether information should be remembered, but where it belongs and where it should become available later.
+- **Rationale:** Information learned in one Road Warrior context should become available in the relevant project or context without requiring Bruce to act as the courier.
+- **Consequences:** Context Routing is preserved as an architectural concept. No implementation mechanism is selected, and the concept does not establish that context continuity is currently available or proven.
+- **Status:** ACCEPTED — IMPLEMENTATION MECHANISM OPEN
+
+### RW-026 — Establish Judgment-Driven Mission Control as a Future Direction
+
+- **ID:** RW-026
+- **Date:** 2026-08-12
+- **Decision:** Road Warrior should eventually provide the judgment layer above Personal OS, using context, commitments, projects, relationships, priorities, and judgment to determine what deserves attention.
+- **Rationale:** Static lists or Kanban views should not require Bruce to supply all classification and prioritization manually. The dashboard should display judgment, not create it.
+- **Consequences:** Judgment-Driven Mission Control is a future integration and design direction, not a Prototype 1 implementation requirement. No implementation mechanism is selected.
+- **Status:** ACCEPTED — FUTURE DIRECTION
+
+### RW-027 — Order Multiple Intents by Dependency
+
+- **ID:** RW-027
+- **Date:** 2026-08-12
+- **Decision:** When multiple intents or responsibilities depend on one another, the Judgment Engine must identify the dependency and order the responsibilities so prerequisites are resolved before downstream work.
+- **Rationale:** Correctly classifying several intents is insufficient when one controls whether or how another should proceed.
+- **Consequences:** Clarification and execution should address the controlling dependency first while preserving authorization boundaries and avoiding premature downstream action.
 - **Status:** ACCEPTED
 
 ## Superseded Decisions
