@@ -1,10 +1,13 @@
 # Road Warrior Prototype 1 Product Requirements
 
-- Version: 1.2
-- Status: Authoritative Prototype 1 requirements
-- Date: 2026-08-12
+- Version: 1.3
+- Status: Approved authoritative frozen Prototype 1 requirements baseline
+- Date: 2026-08-13
+- Approved: Bruce and ChatGPT, 2026-08-13
 - Readiness target: 2026-08-20
 - Field use begins: 2026-08-21
+
+“Frozen” means sufficiently clear and approved to govern Prototype 1 implementation and testing. It does not prohibit a later explicitly governed amendment if reality testing reveals a material requirement change.
 
 ## Purpose
 

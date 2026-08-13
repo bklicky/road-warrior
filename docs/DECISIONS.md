@@ -1,10 +1,17 @@
 # Road Warrior Decision Log
 
-- Version: 1.3
+- Version: 1.4
 - Status: Living governance record
-- Updated: 2026-08-12
+- Updated: 2026-08-13
 
 This log records accepted product, architecture, and working-governance decisions. A decision remains in force until explicitly superseded. Unresolved implementation mechanisms remain open and are not converted into decisions here.
+
+## Document Authority
+
+- Current `DECISIONS.md` governs durable approved decisions.
+- `PRODUCT_REQUIREMENTS.md` governs Prototype 1 scope and acceptance requirements.
+- `IMPLEMENTATION_PLAN.md` governs active phase sequencing and evidence requirements.
+- Older dated milestone documents, workflows, architecture records, and specialized test protocols remain historical or specialized inputs and do not override those current authorities.
 
 ## Decision Record Format
 
@@ -326,6 +333,15 @@ Each entry contains an ID, evidence-supported date, decision, rationale, consequ
 - **Rationale:** A successful recall can be useful without proving reliable universal cross-project memory or exact source fidelity.
 - **Consequences:** Cross-context recall must be tested further and represented cautiously. Richer bidirectional cross-project information sharing remains later architecture and research, not August 21 scope.
 - **Status:** ACCEPTED — V1 OPERATING BOUNDARY; LATER RESEARCH
+
+### RW-036 — Accept Bounded Capability Results as Phase C Evidence
+
+- **ID:** RW-036
+- **Date:** 2026-08-13
+- **Decision:** Phase C exists to discover actual capability boundaries. A repeatably verified result such as `AVAILABLE`, `UNAVAILABLE`, `UNRELIABLE`, `CONFIRMATION-REQUIRED`, or another honestly documented bounded result is valid Phase C evidence. A capability does not have to work for its Phase C test to be completed successfully.
+- **Rationale:** Capability testing must report reality rather than force a preferred capability outcome.
+- **Consequences:** Phase C must explicitly test Google Calendar notification behavior, direct Google Tasks execution or boundary, Gmail authorization and confirmation behavior, Google Drive behavior, desktop, mobile, relevant voice behavior, and the ChatGPT Scheduled Tasks rejection and observed failure boundary. Completing a capability test does not automatically satisfy later Prototype 1 functional requirements, acceptance criteria, or field-readiness requirements.
+- **Status:** ACCEPTED — PHASE C EVIDENCE RULE
 
 ## Superseded Decisions
 
