@@ -1,6 +1,6 @@
 # Road Warrior Decision Log
 
-- Version: 1.4
+- Version: 1.5
 - Status: Living governance record
 - Updated: 2026-08-13
 
@@ -143,7 +143,7 @@ Each entry contains an ID, evidence-supported date, decision, rationale, consequ
 - **Decision:** For Prototype 1, the brainstorm workflow produces a concise summary, stores it in Google Drive, creates a reminder/task, and resumes naturally.
 - **Rationale:** The workflow transfers cognitive responsibility while preserving useful output and future re-entry.
 - **Consequences:** Prototype capability testing and rehearsal must verify the complete capture-and-return loop.
-- **Status:** ACCEPTED
+- **Status:** ACCEPTED AS AMENDED BY RW-037 — REMINDER/TASK STEP NOW USES THE ROAD WARRIOR OBLIGATION LEDGER AND EXTERNAL SURFACING WHEN REQUIRED
 
 ### RW-015 — Prefer Gmail for V1 Email Execution
 
@@ -296,7 +296,7 @@ Each entry contains an ID, evidence-supported date, decision, rationale, consequ
 - **Decision:** Timed obligations route to Google Calendar with a notification; untimed obligations route to Google Tasks as the intended V1 rule. ChatGPT Scheduled Tasks are rejected as a Road Warrior reminder mechanism.
 - **Rationale:** Google Calendar execution succeeded in reality testing. ChatGPT Scheduled Tasks disrupted the primary conversation or chat state and introduced rate-limit friction.
 - **Consequences:** Direct Google Tasks execution remains unproven and must be disclosed as unavailable until verified. Reminder architecture and tests must exclude ChatGPT Scheduled Tasks.
-- **Status:** ACCEPTED — CALENDAR VERIFIED; GOOGLE TASKS UNVERIFIED
+- **Status:** ACCEPTED IN PART — OBLIGATION-STORAGE ROUTING SUPERSEDED BY RW-037; CALENDAR AND SCHEDULED TASKS BOUNDARIES RETAINED
 
 ### RW-032 — Define External Communication Authorization
 
@@ -343,11 +343,20 @@ Each entry contains an ID, evidence-supported date, decision, rationale, consequ
 - **Consequences:** Phase C must explicitly test Google Calendar notification behavior, direct Google Tasks execution or boundary, Gmail authorization and confirmation behavior, Google Drive behavior, desktop, mobile, relevant voice behavior, and the ChatGPT Scheduled Tasks rejection and observed failure boundary. Completing a capability test does not automatically satisfy later Prototype 1 functional requirements, acceptance criteria, or field-readiness requirements.
 - **Status:** ACCEPTED — PHASE C EVIDENCE RULE
 
+### RW-037 — Road Warrior Owns V1 Obligations
+
+- **ID:** RW-037
+- **Date:** 2026-08-13
+- **Decision:** Road Warrior owns obligations and maintains the authoritative V1 obligation ledger. The ledger contains timed and untimed obligations in a simple human-readable Markdown file on a shared Google Drive surface accessible to Road Warrior across relevant transports. External systems may execute, notify, or surface obligations, but they are not the authoritative obligation store.
+- **Rationale:** Formal Phase C testing found direct Google Tasks execution `UNAVAILABLE`, prompting review of the assumption that an external task application should own Road Warrior obligations. Road Warrior ownership better preserves Cognitive Freedom by keeping capture, contextual association, status maintenance, retrieval, surfacing, and appropriate reconciliation within the accepted responsibility.
+- **Consequences:** Google Tasks is not a required V1 obligation store, and its `UNAVAILABLE` Phase C result remains evidence. Time-sensitive obligations remain in the Road Warrior ledger and may also use Google Calendar for external notification. ChatGPT Scheduled Tasks remain rejected. Road Warrior should recognize natural-language completion using context and judgment, ask the smallest clarifying question when identification is materially ambiguous, update the authoritative obligation state, and reconcile related external artifacts when necessary and authorized. Bruce must not be required to manage the ledger manually. Markdown and Google Drive are replaceable V1 implementation choices; databases, Obsidian, semantic retrieval, TencentDB Agent Memory, and other relational or shared-memory systems remain later research. The ledger architecture must be reality-tested before it is treated as proven.
+- **Status:** ACCEPTED — GOVERNED PROTOTYPE 1 REQUIREMENTS AMENDMENT; REALITY TESTING REQUIRED
+
 ## Superseded Decisions
 
-None recorded.
+- RW-037 supersedes only the obligation-storage routing portion of RW-031. RW-031's Google Calendar notification role and rejection of ChatGPT Scheduled Tasks remain in force.
 
 ## Open Decisions
 
-- The verified Prototype 1 capability boundary for Google Drive, direct Google Tasks execution, Gmail drafting and sending, desktop, mobile, and voice behavior.
+- The verified Prototype 1 capability boundary for Google Drive, Gmail drafting and sending, desktop, mobile, and voice behavior. Direct Google Tasks execution is `UNAVAILABLE` and retained as Phase C evidence.
 - Whether WhatsApp/Twilio can proceed without jeopardizing the August 20 readiness target.

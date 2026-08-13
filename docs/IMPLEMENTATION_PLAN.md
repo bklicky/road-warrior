@@ -1,6 +1,6 @@
 # Road Warrior Prototype 1 Implementation Plan
 
-- Version: 1.3
+- Version: 1.4
 - Status: Active
 - Date: 2026-08-13
 - Readiness target: 2026-08-20
@@ -24,33 +24,34 @@ Statuses are limited to `NOT STARTED`, `IN PROGRESS`, `WAITING`, and `COMPLETE`.
 - **Approval:** Bruce and ChatGPT approved `PRODUCT_REQUIREMENTS.md` as the authoritative frozen Prototype 1 requirements baseline on 2026-08-13.
 - **Status:** COMPLETE
 
-## C. Capability and Reminder Reality Testing
+## C. Capability and Obligation Reality Testing
 
-- **Objective:** Verify the actual capabilities and constraints of ChatGPT, Google Drive, Gmail, Google Calendar, Google Tasks, desktop, mobile, and relevant voice behavior before designing around them; preserve the rejection of ChatGPT Scheduled Tasks as a reminder mechanism.
+- **Objective:** Verify the actual capabilities and constraints of ChatGPT, Google Drive, Gmail, Google Calendar, Google Tasks, desktop, mobile, and relevant voice behavior before designing around them; test the approved Road Warrior-owned obligation architecture; and preserve the rejection of ChatGPT Scheduled Tasks as a reminder mechanism.
 - **Dependencies:** Phase B.
 - **Evidence rule:** Phase C discovers actual capability boundaries. A repeatably verified result such as `AVAILABLE`, `UNAVAILABLE`, `UNRELIABLE`, `CONFIRMATION-REQUIRED`, or another honestly documented bounded result is valid Phase C evidence; a capability does not have to work for its test to be completed successfully. Completing a capability test does not automatically satisfy later Prototype 1 functional requirements, acceptance criteria, or field-readiness requirements.
-- **Evidence required:** Repeatable test results recording configuration, observed behavior, failures, confirmation requirements, and capability boundaries for ChatGPT, Google Drive, Gmail authorization and confirmation behavior, Google Calendar timed-obligation and notification behavior, direct Google Tasks execution, desktop, mobile, and relevant voice behavior; and preservation of the ChatGPT Scheduled Tasks rejection and observed failure boundary.
-- **Status:** NOT STARTED
+- **Evidence required:** Repeatable test results recording configuration, observed behavior, failures, confirmation requirements, and capability boundaries for ChatGPT, Google Drive, Gmail authorization and confirmation behavior, Google Calendar timed-obligation and notification behavior, direct Google Tasks execution, desktop, mobile, and relevant voice behavior; preservation of the ChatGPT Scheduled Tasks rejection and observed failure boundary; and bounded end-to-end evidence for durable obligation capture, contextual association, retrieval, surfacing, natural-language completion, status maintenance, and authorized reconciliation with an external notification artifact.
+- **Evidence to date:** Direct Google Tasks execution is `UNAVAILABLE`. Initial obligation-ledger plumbing is `AVAILABLE` for Markdown creation, in-place update, and immediate independent readback through the current Codex Google Drive connector. Later-session and cross-transport retrieval, open-obligation reporting, natural-language completion and ledger update, and timed obligation-to-Calendar reconciliation remain unproven. See `PHASE_C_CAPABILITY_EVIDENCE_2026-08-13.md`.
+- **Status:** IN PROGRESS
 
 ## D. Judgment Specification
 
-- **Objective:** Define observable rules for conversational states, multiple intents, dependency ordering, external communication authorization, execution handoff visibility, Transport-Aware Communication, Adaptive Communication, and the Zero Assumptions clarification rule.
+- **Objective:** Define observable rules for conversational states, multiple intents, dependency ordering, obligation recognition and state reconciliation, external communication authorization, execution handoff visibility, Transport-Aware Communication, Adaptive Communication, and the Zero Assumptions clarification rule.
 - **Dependencies:** Phases B and C.
 - **Evidence required:** Reviewed intent examples, counterexamples, ambiguity cases, dependency cases, expected actions, `Accept → Signal → Execute → Close` cases, transport cases, feedback-adaptation cases, and minimum clarifying questions.
 - **Status:** NOT STARTED
 
 ## E. Prototype Instruction Package
 
-- **Objective:** Create the explicit instruction and reference package that governs Prototype 1 judgment, execution visibility, reminder routing, communication authorization, and adaptive transport behavior across approved transports.
+- **Objective:** Create the explicit instruction and reference package that governs Prototype 1 judgment, execution visibility, obligation ownership and external surfacing, communication authorization, and adaptive transport behavior across approved transports.
 - **Dependencies:** Phases B, C, and D.
 - **Evidence required:** Versioned instruction package with an attachment manifest, setup sequence, operating instructions, and traceability to requirements.
 - **Status:** NOT STARTED
 
 ## F. Core Functional Rehearsal
 
-- **Objective:** Rehearse the Judgment Engine and brainstorm workflow from conversation through visible execution handoff, summary, Google Drive capture, correctly routed obligation handling, explicit close, and natural resumption.
+- **Objective:** Rehearse the Judgment Engine and brainstorm workflow from conversation through visible execution handoff, summary, Google Drive capture, authoritative obligation-ledger handling, appropriate external surfacing, explicit close, and natural resumption.
 - **Dependencies:** Phase E and verified capabilities from Phase C.
-- **Evidence required:** Successful repeated desktop and mobile runs, retained artifacts, transcripts, `Accept → Signal → Execute → Close` observations for noticeable-duration work, correct timed-versus-untimed routing or honest capability disclosure, timing observations, and documented failures.
+- **Evidence required:** Successful repeated desktop and mobile runs, retained artifacts, transcripts, `Accept → Signal → Execute → Close` observations for noticeable-duration work, correct obligation capture and state maintenance, appropriate external surfacing or honest capability disclosure, timing observations, and documented failures.
 - **Status:** NOT STARTED
 
 ## G. Context Continuity and Routing Testing
@@ -76,7 +77,7 @@ Statuses are limited to `NOT STARTED`, `IN PROGRESS`, `WAITING`, and `COMPLETE`.
 
 ## J. Abuse Testing
 
-- **Objective:** Challenge judgment, clarification, capture, communication, execution visibility, continuity, recovery, reminder routing, Transport-Aware Communication, and Adaptive Communication with ambiguous, interrupted, adversarial, and failure-prone scenarios.
+- **Objective:** Challenge judgment, clarification, capture, communication, execution visibility, continuity, recovery, obligation ownership and external surfacing, Transport-Aware Communication, and Adaptive Communication with ambiguous, interrupted, adversarial, and failure-prone scenarios.
 - **Dependencies:** Phases F, G, and H; Phase I only if the stretch goal proceeds.
 - **Evidence required:** Test matrix, observed failures, severity classification, fixes or accepted limitations, transport comparisons, evidence that feedback is adapted without unsupported generalization, and regression results.
 - **Status:** NOT STARTED

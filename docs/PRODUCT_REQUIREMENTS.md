@@ -1,9 +1,10 @@
 # Road Warrior Prototype 1 Product Requirements
 
-- Version: 1.3
-- Status: Approved authoritative frozen Prototype 1 requirements baseline
+- Version: 1.4
+- Status: Approved authoritative frozen Prototype 1 requirements baseline, as amended
 - Date: 2026-08-13
 - Approved: Bruce and ChatGPT, 2026-08-13
+- Amendment: V1 obligation ownership approved by Bruce and ChatGPT, 2026-08-13
 - Readiness target: 2026-08-20
 - Field use begins: 2026-08-21
 
@@ -58,9 +59,9 @@ Judgment determines the appropriate next action.
 
 The approved Prototype 1 brainstorm workflow is:
 
-Conversation → Judgment → Summary → Google Drive capture → Reminder/task → Resume naturally
+Conversation → Judgment → Summary → Google Drive capture → Obligation capture and external surfacing if required → Resume naturally
 
-The summary must be concise. Capture and reminder/task creation must not unnecessarily derail the conversation.
+The summary must be concise. Capture, obligation handling, and any external surfacing must not unnecessarily derail the conversation.
 
 ### External Communication Authorization
 
@@ -70,13 +71,18 @@ The summary must be concise. Capture and reminder/task creation must not unneces
 - For V1 email, Road Warrior uses the Gmail connector. Drafting or sending remains subject to verified connector capability and any required confirmation.
 - Road Warrior must not infer draft or send authority from brainstorming, tentative language, or discussion of communication.
 
-### Obligation and Reminder Routing
+### Obligation Ownership and External Surfacing
 
-- Timed obligations route to Google Calendar with a notification.
-- Untimed obligations route to Google Tasks as the intended V1 rule.
-- Google Calendar execution has positive reality-test evidence.
-- Direct Google Tasks execution remains unproven and must not be represented as available until verified.
+- Road Warrior owns obligations. Its obligation ledger is the authoritative V1 obligation store for both timed and untimed obligations.
+- The V1 ledger is a simple human-readable Markdown file stored on a shared Google Drive surface accessible to Road Warrior across relevant transports.
+- Road Warrior owns obligation capture, appropriate contextual association, status maintenance, retrieval, surfacing, and reconciliation with external notification or execution mechanisms where appropriate.
+- Bruce must not be required to manage the ledger manually.
+- A time-sensitive obligation remains in the Road Warrior ledger and may also use Google Calendar as the approved V1 external notification mechanism where appropriate.
+- When Bruce reports completion naturally, Road Warrior must use conversational context and judgment to identify the obligation, update its authoritative state when confidence is sufficient, and reconcile a related external artifact when necessary and authorized. Material ambiguity requires the smallest clarifying question.
+- Direct Google Tasks execution was found `UNAVAILABLE` during Phase C. Google Tasks is not a required V1 obligation store, and that finding must remain preserved as evidence.
 - ChatGPT Scheduled Tasks must not be used as a Road Warrior reminder mechanism. Reality testing found that they disrupted the primary conversation or chat state and introduced rate-limit friction.
+- The obligation model belongs to Road Warrior rather than to Markdown, Google Drive, or another storage technology. Markdown on shared Google Drive is the approved replaceable Prototype 1 implementation and must be reality-tested.
+- Obsidian, databases, semantic retrieval, TencentDB Agent Memory, and other relational or shared-memory systems remain later research directions and are not Prototype 1 requirements.
 
 ### Context Continuity
 
@@ -134,9 +140,10 @@ Prototype 1 is ready for field use when evidence shows that:
 
 - The Judgment Engine distinguishes the required intent categories or asks the minimum necessary clarifying question.
 - Noticeable-duration work uses visible acceptance, real execution signaling, and an explicit close.
-- The brainstorm workflow completes its summary, Google Drive capture, reminder/task, and conversational return without unnecessary cognitive burden.
+- The brainstorm workflow completes its summary, Google Drive capture, obligation capture and any required external surfacing, and conversational return without unnecessary cognitive burden.
 - Email actions occur only after an explicit request and follow verified Gmail connector capability and confirmation requirements.
-- Reminder handling routes timed obligations to Google Calendar and does not use ChatGPT Scheduled Tasks; unavailable Google Tasks execution is disclosed honestly.
+- Road Warrior durably captures timed and untimed obligations in its authoritative ledger, retrieves and surfaces them appropriately, maintains their state from natural conversation, and does not return routine ledger management to Bruce.
+- Time-sensitive external notification uses Google Calendar where appropriate, remains reconcilable with the authoritative ledger, and does not use ChatGPT Scheduled Tasks; the unavailable Google Tasks boundary is preserved honestly.
 - Context continuity is tested against real project, person, and thread scenarios, with achieved and unavailable behavior documented honestly.
 - At least one Context Routing handoff is observed moving from `Pending` to `Received` after the addressed project incorporates it, without Bruce manually relaying the information.
 - Core behavior works reliably on at least one desktop transport and one mobile transport.
