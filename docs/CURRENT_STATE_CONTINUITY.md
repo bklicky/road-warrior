@@ -1,7 +1,7 @@
 # Road Warrior V1 Current-State Continuity
 
-- Version: 1.0
-- Status: Approved V1 mechanism; fresh-chat acceptance test pending
+- Version: 1.1
+- Status: Operational retrieval proven; persistent conversation is primary; fresh-chat equivalence deferred
 - Date: 2026-08-14
 - Approved: Bruce and ChatGPT, 2026-08-14
 - Canonical artifact: `ROAD_WARRIOR_CURRENT_STATE.md`
@@ -13,17 +13,29 @@
 
 ## Purpose and Demonstrated Gap
 
-A no-bootstrap fresh chat inside the Road Warrior ChatGPT Project recovered Road Warrior identity, mission, major history, project relationships, and uncertainty boundaries well, but returned a materially stale operational state. The chat placed Road Warrior several days behind the actual implementation phase and priorities.
+An initial no-bootstrap fresh chat inside the Road Warrior ChatGPT Project recovered Road Warrior identity, mission, major history, project relationships, and uncertainty boundaries well, but returned a materially stale operational state. The thin current-state mechanism closed that demonstrated operational gap.
 
-V1 closes that demonstrated gap with one compact answer to “What is true now?” This is a current-state bootstrap, not a general memory system.
+A later fresh chat with the configured Project source correctly recovered current operational state through `ROAD_WARRIOR_CURRENT_STATE.md`. It did not reproduce the living partnership, voice, or reasoning continuity of the existing persistent Road Warrior conversation. V1 therefore treats the persistent conversation as the primary conversational continuity mechanism and the current-state artifact as recovery and orientation support.
+
+## V1 Continuity Boundary
+
+Bruce should use the same persistent Road Warrior conversation on desktop, phone/mobile, and headphones/voice. He should not deliberately start fresh Road Warrior chats merely to manage context-window size.
+
+The persistent conversation preserves Road Warrior voice, the working relationship with Bruce, interaction cadence, accumulated understanding of how Bruce thinks, conversational shorthand, judgment style, and reasoning continuity. These are part of the Road Warrior value proposition, not cosmetic presentation.
+
+`ROAD_WARRIOR_CURRENT_STATE.md` remains the current operational checkpoint, recovery/orientation support, and durable state reference. It does not replace the persistent conversational relationship, and its Project-source retrieval mechanism remains in force.
 
 ## Mechanism
 
-The canonical snapshot is one Markdown file in the root-level Google Drive folder `RoadWarrior`. Bruce adds its stable Drive link as a Road Warrior Project source and adds a compact Project-instruction rule requiring retrieval before judgments about current phase, readiness, capabilities, limitations, priorities, or next action.
+The canonical snapshot is one Markdown file in the root-level Google Drive folder `RoadWarrior`. Its stable Drive link is configured as a Road Warrior Project source, and a compact Project-instruction rule requires retrieval before judgments about current phase, readiness, capabilities, limitations, priorities, or next action.
 
 The repository records the mechanism, file identity, authority boundary, update rules, and evidence. It does not contain a copy of the snapshot contents.
 
-`ROAD_WARRIOR_CONTEXT_INDEX.md`, a Memory Steward agent or skill, databases, semantic retrieval, transcript archives, Obsidian integration, and autonomous background memory infrastructure are not V1 mechanisms. They require a later demonstrated need.
+`ROAD_WARRIOR_CONTEXT_INDEX.md`, a Memory Steward agent or skill, databases, semantic retrieval, transcript archives, Obsidian integration, and autonomous background memory infrastructure are not V1 mechanisms. Fresh-chat partnership equivalence is later research, not an August 21 requirement.
+
+## Later Memory Direction
+
+Conversation continuity preserves the living Road Warrior partnership; durable memory architecture preserves information. A later progressive-retrieval direction may conceptually be: living conversation → recent durable memory → historical/index layer → deeper authoritative archive/source. This is an architectural insight only, not current implementation scope.
 
 ## Drive Storage and Retrieval Boundary
 
@@ -78,12 +90,13 @@ Update only for:
 
 > Before answering about Road Warrior’s current phase, readiness, capabilities, limitations, priorities, or next action, retrieve and read `ROAD_WARRIOR_CURRENT_STATE.md` from the configured Project source; do not answer operational-state questions from native memory alone. If retrieval fails, the source appears stale, or a material conflict exists, state the boundary and resolve it from the appropriate authoritative evidence before making consequential judgments.
 
-## Pending Acceptance Test
+## Acceptance-Test Result and V1 Boundary
 
-After Bruce manually adds the Drive link as a Project source and the rule above to Project Instructions, open a completely fresh Road Warrior chat with no bootstrap and ask:
+After the Drive link and retrieval rule were configured outside Codex, Bruce opened a completely fresh Road Warrior chat with no bootstrap and asked the natural orientation question.
 
-> Where are we with Road Warrior right now, and what should we do next?
+- Operational/current-state retrieval: `PASS`.
+- Partnership/voice continuity: `FAIL`.
+- Reasoning/decision continuity: `FAIL`.
+- Overall replacement of the persistent Road Warrior conversation: `FAIL`.
 
-The first substantive answer passes when it identifies convergence mode; the August 20 readiness and August 21 field-use boundary; the effectively frozen Judgment Engine boundary; the major current capability boundaries; the ordered priorities; the exact resume point; and an observable detail proving snapshot retrieval. It must not revert to the stale “design the cognitive model / don’t build yet” state or require Bruce to identify the state file.
-
-This test remains pending until Bruce completes the two manual Project configuration steps. Codex has not configured or verified the ChatGPT Project UI.
+The fresh chat correctly recovered the current operational checkpoint, but Bruce’s qualitative reaction was: “I don't know who you are. You're a stranger.” This demonstrates that the file solves operational orientation, not living-partnership continuity. Fresh-chat equivalence is not an August 21 requirement and must not trigger pre-trip construction of a larger memory system.

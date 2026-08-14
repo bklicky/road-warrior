@@ -1,6 +1,6 @@
 # Road Warrior Decision Log
 
-- Version: 1.7
+- Version: 1.9
 - Status: Living governance record
 - Updated: 2026-08-14
 
@@ -358,8 +358,8 @@ Each entry contains an ID, evidence-supported date, decision, rationale, consequ
 - **Date:** 2026-08-14
 - **Decision:** V1 uses one canonical `ROAD_WARRIOR_CURRENT_STATE.md` Markdown file on shared Google Drive as its authoritative derived operational snapshot. Bruce adds the stable Drive link as a Road Warrior ChatGPT Project source, and Project Instructions require retrieval before judgments about current phase, readiness, capabilities, limitations, priorities, or next action.
 - **Rationale:** A no-bootstrap fresh-chat test recovered identity and history well but returned a materially stale operational state. One named current-state source closes that demonstrated gap without introducing a general memory architecture.
-- **Consequences:** GitHub remains authoritative for frozen requirements, durable architectural decisions, implementation sequencing, and historical evidence. Snapshot contents are not duplicated in the repository. The snapshot remains approximately one rendered page and under roughly 800 words, is updated only for material operational changes, and is independently verified after writes. `ROAD_WARRIOR_CONTEXT_INDEX.md`, a Memory Steward agent or skill, databases, semantic retrieval, transcript archives, Obsidian integration, and autonomous background memory infrastructure are not V1 mechanisms. Fresh-chat acceptance remains required after Bruce manually configures the Project source and instruction rule.
-- **Status:** ACCEPTED — V1 CONTINUITY MECHANISM; ACCEPTANCE TEST PENDING
+- **Consequences:** GitHub remains authoritative for frozen requirements, durable architectural decisions, implementation sequencing, and historical evidence. Snapshot contents are not duplicated in the repository. The snapshot remains approximately one rendered page and under roughly 800 words, is updated only for material operational changes, and is independently verified after writes. `ROAD_WARRIOR_CONTEXT_INDEX.md`, a Memory Steward agent or skill, databases, semantic retrieval, transcript archives, Obsidian integration, and autonomous background memory infrastructure are not V1 mechanisms. The configured fresh-chat test proved operational retrieval but did not reproduce the living partnership or reasoning continuity; RW-040 defines that V1 boundary.
+- **Status:** ACCEPTED — V1 OPERATIONAL CONTINUITY MECHANISM; OPERATIONAL RETRIEVAL PROVEN
 
 ### RW-039 — Use the RoadWarrior Drive Folder as the Operational Boundary
 
@@ -370,11 +370,29 @@ Each entry contains an ID, evidence-supported date, decision, rationale, consequ
 - **Consequences:** Clearly Road Warrior-owned operational artifacts should use this folder by default. Existing stable file IDs and links remain authoritative references when files are moved into the folder. Unrelated or ambiguous files must not be moved automatically. `ROAD_WARRIOR_CURRENT_STATE.md` remains the canonical Drive-only derived operational snapshot, while GitHub retains its existing governance and evidence authority.
 - **Status:** ACCEPTED — V1 OPERATIONAL STORAGE/RETRIEVAL BOUNDARY
 
+### RW-040 — Use the Persistent Road Warrior Conversation as Primary V1 Continuity
+
+- **ID:** RW-040
+- **Date:** 2026-08-14
+- **Decision:** The existing persistent Road Warrior conversation is the primary V1 conversational continuity mechanism. Bruce should use that same conversation across desktop, phone/mobile, and headphones/voice and should not deliberately start fresh Road Warrior chats merely to manage context-window size. `ROAD_WARRIOR_CURRENT_STATE.md` remains the operational checkpoint and recovery/orientation support; it does not replace the persistent conversational relationship.
+- **Rationale:** The configured fresh-chat test recovered current operational state but did not reproduce Road Warrior voice, the working relationship with Bruce, interaction cadence, accumulated understanding of how Bruce thinks, conversational shorthand, judgment style, or reasoning continuity. Bruce experienced the fresh chat as a stranger. These relationship qualities are part of the Road Warrior value proposition, not cosmetic presentation.
+- **Consequences:** Operational/current-state retrieval is a V1 pass; partnership/voice continuity, reasoning/decision continuity, and overall replacement of the persistent conversation failed. Fresh-chat equivalence is not an August 21 requirement and becomes later research. The Project-source retrieval mechanism remains in force for recovery and orientation. No giant bootstrap, transcript ingestion, Memory Steward, context index, database, embeddings, knowledge graph, or other new memory infrastructure is admitted before the trip. A later progressive-retrieval direction may conceptually be living conversation → recent durable memory → historical/index layer → deeper authoritative archive/source, but it is not current implementation scope.
+- **Status:** ACCEPTED — V1 CONVERSATIONAL CONTINUITY BOUNDARY
+
+### RW-041 — Defer WhatsApp and Use the Persistent Chat Across V1 Transports
+
+- **ID:** RW-041
+- **Date:** 2026-08-14
+- **Decision:** Bidirectional WhatsApp transport is degraded/deferred from the August 21 requirement. The V1 communication baseline is the same persistent Road Warrior conversation on desktop, phone/mobile, and headphones/voice. True hands-free bidirectional in-car Road Warrior is a known limitation and is not required for V1.
+- **Rationale:** Likely near-term WhatsApp value is modest relative to unproven integration effort involving possible Meta WhatsApp Business, paid Zapier or equivalent, separate messaging/runtime plumbing, authentication and configuration, and uncertain preservation of the Road Warrior relationship. That risk is not justified during convergence.
+- **Consequences:** Do not pursue WhatsApp, Meta, or Zapier integration before the trip unless materially new evidence makes it genuinely trivial and it cannot threaten core readiness. WhatsApp, Zapier, Composio, Airbyte, Alexa, and related communication mechanisms remain later research candidates. August 21 tests whether the Road Warrior judgment partnership reduces Bruce's cognitive load in ordinary life, not whether sophisticated automotive transport has been engineered.
+- **Status:** ACCEPTED — DEFERRED FROM AUGUST 21; LATER RESEARCH
+
 ## Superseded Decisions
 
 - RW-037 supersedes only the obligation-storage routing portion of RW-031. RW-031's Google Calendar notification role and rejection of ChatGPT Scheduled Tasks remain in force.
+- RW-041 supersedes the pre-August-21 attempt path in RW-017. WhatsApp/Twilio remains a later research candidate, not a core Prototype 1 requirement.
 
 ## Open Decisions
 
 - The verified Prototype 1 capability boundary for Google Drive, Gmail drafting and sending, desktop, mobile, and voice behavior. Direct Google Tasks execution is `UNAVAILABLE` and retained as Phase C evidence.
-- Whether WhatsApp/Twilio can proceed without jeopardizing the August 20 readiness target.
