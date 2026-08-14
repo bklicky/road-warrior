@@ -1,12 +1,19 @@
 # Road Warrior Prototype 1 Implementation Plan
 
-- Version: 1.4
+- Version: 1.5
 - Status: Active
-- Date: 2026-08-13
+- Date: 2026-08-14
 - Readiness target: 2026-08-20
 - Field use begins: 2026-08-21
 
 Statuses are limited to `NOT STARTED`, `IN PROGRESS`, `WAITING`, and `COMPLETE`. Completion requires the stated evidence; planned work or discussion alone is not completion.
+
+## Current Convergence Posture
+
+- Road Warrior is in CONVERGENCE / “batten down the hatches” mode for the August 20 readiness decision and August 21 field use.
+- Nothing new enters V1 unless it closes a demonstrated trip-readiness gap.
+- The root-level Google Drive folder `RoadWarrior` is the default storage and retrieval boundary for clearly Road Warrior-owned operational artifacts; unrelated or ambiguous files are not moved automatically.
+- Current ordered priorities are: close the fresh-chat/current-state continuity gap; create and test a simple handoff-consumer skill or instruction for selected projects; attempt simple bidirectional WhatsApp transport only as gated stretch work; perform phone/headphones/mobile rehearsal; and perform the final August 20 readiness rehearsal.
 
 ## A. Repository Synchronization
 
@@ -30,7 +37,7 @@ Statuses are limited to `NOT STARTED`, `IN PROGRESS`, `WAITING`, and `COMPLETE`.
 - **Dependencies:** Phase B.
 - **Evidence rule:** Phase C discovers actual capability boundaries. A repeatably verified result such as `AVAILABLE`, `UNAVAILABLE`, `UNRELIABLE`, `CONFIRMATION-REQUIRED`, or another honestly documented bounded result is valid Phase C evidence; a capability does not have to work for its test to be completed successfully. Completing a capability test does not automatically satisfy later Prototype 1 functional requirements, acceptance criteria, or field-readiness requirements.
 - **Evidence required:** Repeatable test results recording configuration, observed behavior, failures, confirmation requirements, and capability boundaries for ChatGPT, Google Drive, Gmail authorization and confirmation behavior, Google Calendar timed-obligation and notification behavior, direct Google Tasks execution, desktop, mobile, and relevant voice behavior; preservation of the ChatGPT Scheduled Tasks rejection and observed failure boundary; and bounded end-to-end evidence for durable obligation capture, contextual association, retrieval, surfacing, natural-language completion, status maintenance, and authorized reconciliation with an external notification artifact.
-- **Evidence to date:** Direct Google Tasks execution is `UNAVAILABLE`. Initial obligation-ledger plumbing is `AVAILABLE` for Markdown creation, in-place update, and immediate independent readback through the current Codex Google Drive connector. Later-session and cross-transport retrieval, open-obligation reporting, natural-language completion and ledger update, and timed obligation-to-Calendar reconciliation remain unproven. See `PHASE_C_CAPABILITY_EVIDENCE_2026-08-13.md`.
+- **Evidence to date:** Direct Google Tasks execution is `UNAVAILABLE`. Initial obligation-ledger plumbing is `AVAILABLE` for Markdown creation, in-place update, and immediate independent readback through the current Codex Google Drive connector. Google Calendar timed notification/surfacing has basic positive evidence. Gmail read-side intelligence and explicitly authorized promotional-email deletion have basic positive reported evidence. Drive search and read/discovery of the shared handoff artifact are `AVAILABLE`; automatic receiving-project consumption remains unproven. The canonical `ROAD_WARRIOR_CURRENT_STATE.md` Drive artifact has been created and independently read back, while automatic fresh-chat retrieval remains unproven. The `RoadWarrior` Drive folder is verified as the parent of the current-state, handoff, obligation, and mind-map artifacts without changing their file IDs; it is now the default operational storage/retrieval boundary. Later-session and cross-transport obligation retrieval, open-obligation reporting, natural-language completion and ledger update, and timed obligation-to-Calendar reconciliation remain unproven. See `PHASE_C_CAPABILITY_EVIDENCE_2026-08-13.md` and `PHASE_C_CAPABILITY_EVIDENCE_2026-08-14.md`.
 - **Status:** IN PROGRESS
 
 ## D. Judgment Specification
@@ -38,7 +45,8 @@ Statuses are limited to `NOT STARTED`, `IN PROGRESS`, `WAITING`, and `COMPLETE`.
 - **Objective:** Define observable rules for conversational states, multiple intents, dependency ordering, obligation recognition and state reconciliation, external communication authorization, execution handoff visibility, Transport-Aware Communication, Adaptive Communication, and the Zero Assumptions clarification rule.
 - **Dependencies:** Phases B and C.
 - **Evidence required:** Reviewed intent examples, counterexamples, ambiguity cases, dependency cases, expected actions, `Accept → Signal → Execute → Close` cases, transport cases, feedback-adaptation cases, and minimum clarifying questions.
-- **Status:** NOT STARTED
+- **Approval:** Bruce and ChatGPT consider the existing Judgment Engine sufficient for Prototype 1 as of 2026-08-14. It is effectively frozen except for genuine defects discovered through use; ordinary behavioral coaching continues through use and feedback.
+- **Status:** COMPLETE
 
 ## E. Prototype Instruction Package
 
@@ -59,6 +67,7 @@ Statuses are limited to `NOT STARTED`, `IN PROGRESS`, `WAITING`, and `COMPLETE`.
 - **Objective:** Determine how much project, person, and thread continuity Prototype 1 can preserve; test contextual recall against authoritative artifacts; and test the shared Markdown handoff ledger from Road Warrior creation through receiving-project acknowledgment, without requiring Bruce to reconstruct or relay prior work.
 - **Dependencies:** Phases C, D, E, and a stable core loop from Phase F.
 - **Evidence required:** Scenario results across representative contexts; comparison of recalled context with an authoritative artifact when exactness matters; at least one addressed handoff observed moving from `Pending` to `Received` after incorporation by the receiving project; documented pickup, acknowledgment, continuity gaps, and recovery behavior; and an evidence-based Prototype 1 boundary.
+- **Evidence to date:** Native fresh-chat continuity is strong for identity and history but insufficient for current operational state without a thin bootstrap. Drive-based handoff search and read/discovery are proven in the current connector context; automatic consumer incorporation and acknowledgment remain unproven. `ROAD_WARRIOR_CURRENT_STATE.md` and its retrieval rule are implemented, but the no-bootstrap fresh-chat acceptance test is pending Bruce’s manual Project configuration. See `CURRENT_STATE_CONTINUITY.md` and `PHASE_C_CAPABILITY_EVIDENCE_2026-08-14.md`.
 - **Status:** NOT STARTED
 
 ## H. Communication-Return Testing

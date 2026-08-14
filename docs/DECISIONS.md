@@ -1,8 +1,8 @@
 # Road Warrior Decision Log
 
-- Version: 1.5
+- Version: 1.7
 - Status: Living governance record
-- Updated: 2026-08-13
+- Updated: 2026-08-14
 
 This log records accepted product, architecture, and working-governance decisions. A decision remains in force until explicitly superseded. Unresolved implementation mechanisms remain open and are not converted into decisions here.
 
@@ -351,6 +351,24 @@ Each entry contains an ID, evidence-supported date, decision, rationale, consequ
 - **Rationale:** Formal Phase C testing found direct Google Tasks execution `UNAVAILABLE`, prompting review of the assumption that an external task application should own Road Warrior obligations. Road Warrior ownership better preserves Cognitive Freedom by keeping capture, contextual association, status maintenance, retrieval, surfacing, and appropriate reconciliation within the accepted responsibility.
 - **Consequences:** Google Tasks is not a required V1 obligation store, and its `UNAVAILABLE` Phase C result remains evidence. Time-sensitive obligations remain in the Road Warrior ledger and may also use Google Calendar for external notification. ChatGPT Scheduled Tasks remain rejected. Road Warrior should recognize natural-language completion using context and judgment, ask the smallest clarifying question when identification is materially ambiguous, update the authoritative obligation state, and reconcile related external artifacts when necessary and authorized. Bruce must not be required to manage the ledger manually. Markdown and Google Drive are replaceable V1 implementation choices; databases, Obsidian, semantic retrieval, TencentDB Agent Memory, and other relational or shared-memory systems remain later research. The ledger architecture must be reality-tested before it is treated as proven.
 - **Status:** ACCEPTED — GOVERNED PROTOTYPE 1 REQUIREMENTS AMENDMENT; REALITY TESTING REQUIRED
+
+### RW-038 — Use One Thin Current-State Bootstrap for V1
+
+- **ID:** RW-038
+- **Date:** 2026-08-14
+- **Decision:** V1 uses one canonical `ROAD_WARRIOR_CURRENT_STATE.md` Markdown file on shared Google Drive as its authoritative derived operational snapshot. Bruce adds the stable Drive link as a Road Warrior ChatGPT Project source, and Project Instructions require retrieval before judgments about current phase, readiness, capabilities, limitations, priorities, or next action.
+- **Rationale:** A no-bootstrap fresh-chat test recovered identity and history well but returned a materially stale operational state. One named current-state source closes that demonstrated gap without introducing a general memory architecture.
+- **Consequences:** GitHub remains authoritative for frozen requirements, durable architectural decisions, implementation sequencing, and historical evidence. Snapshot contents are not duplicated in the repository. The snapshot remains approximately one rendered page and under roughly 800 words, is updated only for material operational changes, and is independently verified after writes. `ROAD_WARRIOR_CONTEXT_INDEX.md`, a Memory Steward agent or skill, databases, semantic retrieval, transcript archives, Obsidian integration, and autonomous background memory infrastructure are not V1 mechanisms. Fresh-chat acceptance remains required after Bruce manually configures the Project source and instruction rule.
+- **Status:** ACCEPTED — V1 CONTINUITY MECHANISM; ACCEPTANCE TEST PENDING
+
+### RW-039 — Use the RoadWarrior Drive Folder as the Operational Boundary
+
+- **ID:** RW-039
+- **Date:** 2026-08-14
+- **Decision:** The root-level Google Drive folder `RoadWarrior` is the default storage and retrieval boundary for Road Warrior operational artifacts.
+- **Rationale:** A single bounded Drive location improves operational discovery and maintenance without changing artifact authority or introducing a broader memory architecture.
+- **Consequences:** Clearly Road Warrior-owned operational artifacts should use this folder by default. Existing stable file IDs and links remain authoritative references when files are moved into the folder. Unrelated or ambiguous files must not be moved automatically. `ROAD_WARRIOR_CURRENT_STATE.md` remains the canonical Drive-only derived operational snapshot, while GitHub retains its existing governance and evidence authority.
+- **Status:** ACCEPTED — V1 OPERATIONAL STORAGE/RETRIEVAL BOUNDARY
 
 ## Superseded Decisions
 
