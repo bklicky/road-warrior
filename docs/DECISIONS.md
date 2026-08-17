@@ -396,3 +396,12 @@ Each entry contains an ID, evidence-supported date, decision, rationale, consequ
 ## Open Decisions
 
 - The verified Prototype 1 capability boundary for Google Drive, Gmail drafting and sending, desktop, mobile, and voice behavior. Direct Google Tasks execution is `UNAVAILABLE` and retained as Phase C evidence.
+
+### RW-042 — Use a Once-Per-Day Project Handoff Consumer Trigger
+
+- **ID:** RW-042
+- **Date:** 2026-08-17
+- **Decision:** Participating projects consume Road Warrior handoffs on the first user message in that project each calendar day. Before responding, the project checks the exact shared `ROAD_WARRIOR_HANDOFFS` ledger for Pending entries unambiguously addressed to it. After a successful check, it does not check again that calendar day unless Bruce explicitly requests another Road Warrior-message check.
+- **Rationale:** The prior “open or meaningfully resume” trigger was ambiguous, while checking every user turn would impose unnecessary Drive latency. A deterministic once-per-calendar-day trigger preserves automatic pickup after Bruce has been away without making Bruce remember to request synchronization.
+- **Consequences:** There is no background monitoring or polling. Receiving projects remain responsible for durable incorporation, deduplication, verified readback, and acknowledgment only after success. Automatic background project invocation remains unproven and is not required for this V1 mechanism.
+- **Status:** ACCEPTED — V1 CROSS-PROJECT CONSUMER TRIGGER

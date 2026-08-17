@@ -108,3 +108,11 @@ Statuses are limited to `NOT STARTED`, `IN PROGRESS`, `WAITING`, and `COMPLETE`.
 - **Dependencies:** Phase K go decision and safe operating conditions for the chosen transports and environments.
 - **Evidence required:** Session records, captured artifacts, continuity and judgment observations, field feedback, reflection, failures, and post-use assessment against Prototype 1 acceptance criteria.
 - **Status:** NOT STARTED
+
+## 2026-08-17 Convergence Update
+
+- Cross-project handoff consumption is now proven at a bounded V1 level for Guitar and Baking: exact-ledger retrieval, target filtering, project-owned durable state/action update, readback verification, and receipt acknowledgment all succeeded.
+- The consumer trigger is now deterministic: first user message in the participating project each calendar day, with no repeat check that day unless Bruce explicitly asks for a new Road Warrior-message check. No background monitoring or polling is claimed.
+- Two new Pending handoffs (`RW-HO-0004` Guitar and `RW-HO-0005` Baking) are reserved for a natural first-message-of-day trigger test on the next calendar day.
+- Twilio SMS has moved from abstract stretch research to an active optional transport experiment. Basic two-way SMS is proven, the Road Warrior Twilio Function is deployed, the permanent number `+1 805-600-2358` is acquired, and A2P campaign review is pending. SMS remains non-required for August 21 and must not destabilize core readiness.
+- See `PHASE_C_CAPABILITY_EVIDENCE_2026-08-17.md`.
