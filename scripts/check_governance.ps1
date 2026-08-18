@@ -99,6 +99,7 @@ Assert-Contains 'docs/OBLIGATION_WORKER_PROOF_2026-08-18.md' 'controlled single-
 Assert-Contains 'docs/OBLIGATION_WORKER_PROOF_2026-08-18.md' 'does not prove or authorize production use, detached/background execution, durable dispatch' 'OBLIGATION-WORKER-NON-CLAIMS'
 Assert-Contains 'scripts/obligation_worker_proof.py' 'TARGET_RESOURCE_ID = "1sy1jB1MECL-DTDdd4s7Q7K2_cgTnWT94"' 'OBLIGATION-WORKER-STABLE-TARGET'
 Assert-Contains 'scripts/obligation_worker_proof.py' 'REQUIRED_FORBIDDEN_ACTIONS' 'OBLIGATION-WORKER-SCOPE-BOUNDARY'
+Assert-Contains 'scripts/obligation_worker_proof.py' 'accepted_responsibility' 'OBLIGATION-WORKER-CANONICAL-ENVELOPE'
 Assert-Contains 'tests/test_obligation_worker_proof.py' 'test_e_ambiguous_outcome_reads_before_retry_and_does_not_duplicate' 'OBLIGATION-WORKER-AMBIGUOUS-OUTCOME-TEST'
 Assert-Contains 'docs/HORIZON.md' 'dashboard must not independently redefine priorities or write authoritative obligation or handoff state' 'DASHBOARD-NON-AUTHORITY'
 

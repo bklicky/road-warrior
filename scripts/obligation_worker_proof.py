@@ -133,6 +133,11 @@ def validate_envelope(envelope: dict[str, Any]) -> list[str]:
         "transaction_id",
         "idempotency_key",
         "intent_type",
+        "accepted_responsibility",
+        "authority",
+        "operations",
+        "payload",
+        "resource_ids",
         "operation",
         "obligation_text",
         "context",
@@ -143,6 +148,9 @@ def validate_envelope(envelope: dict[str, Any]) -> list[str]:
         "forbidden_actions",
         "completion_condition",
         "required_verification_evidence",
+        "expiry",
+        "retry_policy",
+        "closure_policy",
         "preconditions",
         "captured_at",
     ]
@@ -182,6 +190,36 @@ def validate_contract(envelope: dict[str, Any], state: dict[str, Any], result: d
     expected_side_effect = CREATE_SIDE_EFFECT if operation == "create" else TERMINAL_SIDE_EFFECT
     if envelope["allowed_side_effects"] != [expected_side_effect]:
         return fail(result, "SIDE_EFFECT_SCOPE_MISMATCH", "Allowed side effects are not the exact proof operation.")
+    if envelope["operations"] != [expected_side_effect]:
+        return fail(result, "OPERATION_SCOPE_MISMATCH", "Ordered operations are not the exact proof operation.")
+    if envelope["accepted_responsibility"] != envelope["obligation_text"]:
+        return fail(result, "RESPONSIBILITY_MISMATCH", "Accepted responsibility differs from the exact obligation.")
+    expected_payload = {
+        "obligation_text": envelope["obligation_text"],
+        "context": envelope["context"],
+        "timing": envelope["timing"],
+        "target_record_id": envelope["target_record_id"],
+    }
+    if envelope["payload"] != expected_payload:
+        return fail(result, "PAYLOAD_MISMATCH", "Payload is not the exact resolved proof payload.")
+    if envelope["resource_ids"] != {
+        "obligation_ledger": TARGET_RESOURCE_ID,
+        "obligation_record": envelope["target_record_id"],
+    }:
+        return fail(result, "RESOURCE_SCOPE_MISMATCH", "Resource IDs are not the exact authorized targets.")
+    authority = envelope["authority"]
+    if not isinstance(authority, dict) or authority.get("authorized_by") != "Bruce/ChatGPT" or not authority.get("scope"):
+        return fail(result, "AUTHORITY_INVALID", "Proof authority is absent or outside the approved source.", requires_judgment=True)
+    if envelope["retry_policy"] != {"max_retries": 0, "retryable_errors": []}:
+        return fail(result, "RETRY_POLICY_MISMATCH", "This proof permits no automatic retries.")
+    if envelope["closure_policy"] != {"decision_owner": "Road Warrior", "worker_may_communicate": False}:
+        return fail(result, "CLOSURE_POLICY_MISMATCH", "Road Warrior must retain all human-facing closure authority.")
+    try:
+        expiry = datetime.fromisoformat(envelope["expiry"].replace("Z", "+00:00"))
+        if expiry.tzinfo is None or expiry.astimezone(timezone.utc) <= datetime.now(timezone.utc):
+            raise ValueError("expired")
+    except (TypeError, ValueError):
+        return fail(result, "TRANSACTION_EXPIRED", "Transaction expiry is invalid or has passed.", requires_judgment=True)
     if not REQUIRED_VERIFICATION_EVIDENCE.issubset(set(envelope["required_verification_evidence"])):
         return fail(result, "VERIFICATION_BOUNDARY_INCOMPLETE", "The transaction omits required verification evidence.")
     expected_intent = "record_untimed_obligation" if operation == "create" else "terminalize_test_obligation"

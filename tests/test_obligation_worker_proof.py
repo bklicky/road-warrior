@@ -38,6 +38,22 @@ def envelope_for(ledger: str, state: dict, operation: str = "create"):
         "transaction_id": "rw-owp-test-terminal" if terminal else "rw-owp-test-create",
         "idempotency_key": "rw-owp-test-terminal-v1" if terminal else "rw-owp-test-create-v1",
         "intent_type": "terminalize_test_obligation" if terminal else "record_untimed_obligation",
+        "accepted_responsibility": "Governed Obligation Worker proof — disposable test obligation.",
+        "authority": {
+            "authorized_by": "Bruce/ChatGPT",
+            "scope": "One controlled ledger-only Obligation Worker proof.",
+        },
+        "operations": [worker.TERMINAL_SIDE_EFFECT if terminal else worker.CREATE_SIDE_EFFECT],
+        "payload": {
+            "obligation_text": "Governed Obligation Worker proof — disposable test obligation.",
+            "context": "Road Warrior V1.5 — controlled ledger-only proof.",
+            "timing": "untimed",
+            "target_record_id": "RW-OB-TEST-001",
+        },
+        "resource_ids": {
+            "obligation_ledger": worker.TARGET_RESOURCE_ID,
+            "obligation_record": "RW-OB-TEST-001",
+        },
         "operation": operation,
         "obligation_text": "Governed Obligation Worker proof — disposable test obligation.",
         "context": "Road Warrior V1.5 — controlled ledger-only proof.",
@@ -54,6 +70,9 @@ def envelope_for(ledger: str, state: dict, operation: str = "create"):
             "idempotency_marker_once",
             "unrelated_content_preserved",
         ],
+        "expiry": "2099-08-19T00:00:00Z",
+        "retry_policy": {"max_retries": 0, "retryable_errors": []},
+        "closure_policy": {"decision_owner": "Road Warrior", "worker_may_communicate": False},
         "preconditions": {
             "content_sha256": worker.sha256(ledger),
             "revision_id": state["revision_id"],

@@ -13,7 +13,7 @@ Road Warrior supplied one already-judged untimed test obligation. A dependency-f
 
 The proof used one controlled writer. It did not touch Calendar, Gmail, handoffs, Scheduled Tasks, Personal OS, a queue, a service, a daemon, a VPS, or any other ledger. The raw Drive file was updated in place; its ID remained unchanged.
 
-## Exact Create Transaction Envelope
+## Final Implemented Create Transaction Envelope
 
 ```json
 {
@@ -21,6 +21,22 @@ The proof used one controlled writer. It did not touch Calendar, Gmail, handoffs
   "transaction_id": "rw-owp-20260818-001-create",
   "idempotency_key": "rw-owp-20260818-001-create-v1",
   "intent_type": "record_untimed_obligation",
+  "accepted_responsibility": "Governed Obligation Worker proof — disposable test obligation.",
+  "authority": {
+    "authorized_by": "Bruce/ChatGPT",
+    "scope": "One controlled ledger-only Obligation Worker proof."
+  },
+  "operations": ["append_exact_obligation_record"],
+  "payload": {
+    "obligation_text": "Governed Obligation Worker proof — disposable test obligation.",
+    "context": "Road Warrior V1.5 — controlled ledger-only Obligation Worker proof; disposable, no real-world consequence, and no Calendar action.",
+    "timing": "untimed",
+    "target_record_id": "RW-OB-20260818-006"
+  },
+  "resource_ids": {
+    "obligation_ledger": "1sy1jB1MECL-DTDdd4s7Q7K2_cgTnWT94",
+    "obligation_record": "RW-OB-20260818-006"
+  },
   "operation": "create",
   "obligation_text": "Governed Obligation Worker proof — disposable test obligation.",
   "context": "Road Warrior V1.5 — controlled ledger-only Obligation Worker proof; disposable, no real-world consequence, and no Calendar action.",
@@ -47,6 +63,9 @@ The proof used one controlled writer. It did not touch Calendar, Gmail, handoffs
     "idempotency_marker_once",
     "unrelated_content_preserved"
   ],
+  "expiry": "2026-08-19T00:00:00-07:00",
+  "retry_policy": {"max_retries": 0, "retryable_errors": []},
+  "closure_policy": {"decision_owner": "Road Warrior", "worker_may_communicate": false},
   "preconditions": {
     "content_sha256": "1eebdaa49c4d2c02151d1a1ab395bac4d56c071b90895ff5f70b44ff596551ba",
     "modified_time": "2026-08-18T20:12:49.283Z",
@@ -55,6 +74,8 @@ The proof used one controlled writer. It did not touch Calendar, Gmail, handoffs
   "captured_at": "2026-08-18T15:29:51-07:00"
 }
 ```
+
+The initial live mutation encoded the task-specific values in this envelope but did not yet expose every generic canonical field by its final name. Final contract crosswalk made `accepted_responsibility`, `authority`, `operations`, `payload`, `resource_ids`, `expiry`, `retry_policy`, and `closure_policy` explicit and enforceable without changing mutation semantics. The complete envelope above was then re-delivered non-mutatingly against a fresh final authoritative snapshot: contract validation passed, the result was `already_applied`, transaction and idempotency marker counts were one, and no candidate or write was produced. The complete named-field new-transaction path is covered by the deterministic case A; no second live test record was created.
 
 The terminal transaction used the same bounded shape with `operation: terminalize`, intent `terminalize_test_obligation`, transaction `rw-owp-20260818-001-terminal`, idempotency key `rw-owp-20260818-001-terminal-v1`, the then-current content/revision/modified-time preconditions, and only `transition_exact_test_record_to_terminal` allowed.
 
@@ -85,7 +106,7 @@ Idempotency is durable in the authoritative record. Re-delivery checks the opera
 - Create mutation plus authoritative readback: 3.507 seconds.
 - Terminal mutation connector call: 4.922 seconds.
 - Terminal mutation plus authoritative readback: 5.867 seconds.
-- Six local deterministic regression cases: 0.221 seconds in the final complete run (0.240 seconds in the first complete run).
+- Six local deterministic regression cases: 0.225 seconds in the final complete run (0.240 seconds in the first complete run).
 
 These are synchronous transaction-path measurements, not acknowledgment latency. The proof core and live Drive adapter were orchestrated interactively rather than through a dispatcher, so no end-to-end durable-dispatch latency was measured.
 
