@@ -67,4 +67,12 @@ The surface should present judgment already formed from relevant context rather 
 
 **Principle:** “The dashboard should display judgment, not create it.”
 
+The approved governed-worker direction provides a future-compatible boundary without selecting a dashboard design:
+
+- workers may gather verified state and maintain derived projections;
+- Road Warrior alone determines salience, priority, meaning, and what deserves Bruce's attention;
+- the dashboard may display projections of that judged state;
+- dashboard actions return to Road Warrior as new intent; and
+- the dashboard must not independently redefine priorities or write authoritative obligation or handoff state.
+
 This is a V3 brainstorm and design direction, not a Prototype 1 requirement.

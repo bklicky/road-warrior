@@ -1,7 +1,7 @@
 # Road Warrior Architecture
 
-- Version: 1.0
-- Status: Current V1 architecture
+- Version: 1.1
+- Status: Current V1 architecture with approved V1.5 governed-worker direction; no worker implementation authorized
 - Date: 2026-08-18
 
 Road Warrior is a Cognitive Operating System whose core is judgment and responsibility, not a particular interface, model, connector, or storage product. This architecture implements the frozen outcomes of Cognitive Freedom and Attention Continuity through a small governed control loop and explicit authoritative records.
@@ -12,13 +12,17 @@ Road Warrior is a Cognitive Operating System whose core is judgment and responsi
 Conversation on an approved transport
   -> Judgment Engine determines intent, confidence, authority, and dependencies
   -> Operating Kernel selects the governed path and authoritative record
-  -> Capability adapter performs an authorized local or external action
-  -> Independent verification reads the resulting authoritative state
-  -> Responsibility closes, blocks, or returns explicitly
+  -> Road Warrior creates an immutable bounded transaction when a worker path is appropriate
+  -> An approved execution mechanism durably dispatches the transaction before early acknowledgment
+  -> A narrow governed worker performs only the authorized operation
+  -> The worker independently verifies the authoritative result and returns structured evidence
+  -> Road Warrior retains responsibility and judges human-facing closure, blockage, or return
   -> Conversation resumes naturally
 ```
 
-The cognitive partnership is the front end. The Judgment Engine and Operating Kernel form the control plane. Connectors and applications are replaceable capability adapters. Repository governance and named operational artifacts provide durable state and evidence.
+The cognitive partnership is the front end. Road Warrior, the Judgment Engine, and the Operating Kernel form the singular control plane. Governed workers are a replaceable execution plane around that brain. Connectors, applications, and any future runtime remain implementation mechanisms. Repository governance and named operational artifacts provide durable authority and evidence.
+
+The worker direction is approved architecture only. No worker, dispatcher, queue, background runtime, service, agent, or deployment exists or is authorized by this document.
 
 ## System Boundaries
 
@@ -28,6 +32,15 @@ The cognitive partnership is the front end. The Judgment Engine and Operating Ke
 - The repository governance control plane: frozen principles, accepted decisions, requirements, kernel, manifest, architecture, plan, protocols, and tests.
 - Road Warrior ownership of obligations and producer-side context routing judgment.
 - Verification requirements and explicit completion/blockage reporting.
+
+### Approved V1.5 Direction
+
+- Road Warrior remains the singular executive judgment engine and conversational relationship with Bruce.
+- Workers execute already-judged immutable transactions under `GOVERNED_WORKER_CONTRACT.md`; they do not interpret Bruce or exercise independent product judgment.
+- One Obligation Worker is the first conceptual proof candidate. It requires separate authorization and evidence before implementation.
+- Additional workers are admitted individually only after evidence justifies them.
+- Deterministic code is preferred for deterministic work; a general multi-agent architecture is not approved.
+- True detached execution, if later justified, should not depend on Bruce's Windows computer remaining awake. No runtime substrate is selected.
 
 ### External but Governed
 
@@ -45,6 +58,7 @@ The cognitive partnership is the front end. The Judgment Engine and Operating Ke
 - WhatsApp or production SMS as an August 21 requirement.
 - Relational-memory infrastructure, semantic retrieval, dashboards, Android/Android Auto software, and production multi-agent infrastructure.
 - Any external action not explicitly authorized by the user and verified after execution.
+- Any worker implementation, dispatcher, queue, service, or deployment until separately authorized.
 
 ## Components
 
@@ -61,8 +75,24 @@ The cognitive partnership is the front end. The Judgment Engine and Operating Ke
 | Current-state bootstrap | Provide bounded operational recovery/orientation. | Drive `ROAD_WARRIOR_CURRENT_STATE.md`; derived, not governance authority. |
 | Capability adapters | Perform approved Drive, Calendar, Gmail, or other bounded operations. | Actual availability and confirmation requirements are established by evidence. |
 | Verification layer | Independently read back authoritative state before a completion claim. | Evidence, receipts, and capability records. |
+| Road Warrior control plane | Judge intent, ambiguity, authority, priority, dependencies, acceptance, completion, materiality, and human-facing communication. | Singular executive authority; never delegated to workers. |
+| Durable dispatcher | Future optional mechanism that durably accepts immutable transactions before early acknowledgment. | Approved interface boundary only; no implementation selected or available. |
+| Governed worker | Execute one narrow transaction, protect authoritative state, verify the result, and return structured evidence. | `GOVERNED_WORKER_CONTRACT.md`; no worker currently authorized. |
+| Worker evidence result | Return per-operation state, authoritative IDs and versions, readback evidence, retries, errors, and unresolved boundaries. | Evidence for Road Warrior judgment; not a competing source of truth. |
 
 ## Data and Control Flows
+
+### Governed Worker Transaction
+
+1. Bruce speaks naturally to Road Warrior; no worker interprets the utterance.
+2. Road Warrior judges intent, ambiguity, authority, dependencies, priority, and completion conditions.
+3. Road Warrior accepts only a sufficiently understood responsibility and creates an immutable transaction under `GOVERNED_WORKER_CONTRACT.md`.
+4. Road Warrior may acknowledge accepted responsibility before execution finishes only after a real mechanism has durably accepted the transaction. False acceptance is prohibited.
+5. The worker validates the envelope, reads current authoritative state, checks concurrency and idempotency, performs only the ordered operation, and independently verifies the result.
+6. The worker returns structured evidence or `partial`, `blocked`, `failed`, `outcome_unknown`, or `requires_judgment` without communicating with Bruce.
+7. Road Warrior retains responsibility and decides whether routine success closes conversationally, silently, or through a later approved low-salience mechanism. Failures and conditions threatening an obligation surface according to urgency and consequence.
+
+Acknowledgment latency and transaction-completion latency are separate measures. The acknowledgment design target is approximately one to two seconds where technically possible; multi-minute blocking execution before acknowledgment is a product failure.
 
 ### Capture: "Remember this"
 
@@ -112,3 +142,6 @@ The cognitive partnership is the front end. The Judgment Engine and Operating Ke
 - **Security and authority:** external mutations require explicit user authority; discussion or tool availability is not authorization.
 - **Change discipline:** frozen outcomes remain stable, historical evidence remains intact, current governance is synchronized, and tests accompany behavior changes.
 - **Deferred evolution:** the V2 local-first handoff recommendation is recorded in `HORIZON.md`; it is not implemented by this architecture.
+- **Worker contract:** authority, transaction, idempotency, concurrency, retry, artifact-protection, and evidence rules are canonical in `GOVERNED_WORKER_CONTRACT.md`.
+- **No authority by availability:** architecture approval and tool availability do not authorize a worker proof or make background execution real.
+- **Conversational continuity:** worker plumbing and logs remain off the human-facing surface; Road Warrior alone acknowledges, challenges, and closes in its established voice.

@@ -7,6 +7,7 @@ This file defines the repository-wide guardrails that contributors and automated
 Before accepting or performing a governed action, read and apply [ROAD_WARRIOR_OPERATING_KERNEL.md](ROAD_WARRIOR_OPERATING_KERNEL.md). Governed actions include:
 
 - accepting, recording, surfacing, completing, or returning an obligation;
+- dispatching or executing a governed worker transaction;
 - creating or acknowledging a cross-project handoff;
 - drafting, sending, deleting, creating, or changing anything in an external system;
 - changing a source-of-truth or current-state artifact;
@@ -37,9 +38,19 @@ Also consult the governing source identified in [docs/DOCUMENT_STATUS.md](docs/D
 - Do not make Bruce the manual courier, ledger administrator, or synchronization mechanism.
 - When evidence contradicts belief or documentation, report the evidence and repair the correct governing layer without rewriting historical records.
 
+## Governed Worker Boundary
+
+- Apply [the Governed Worker Contract](docs/GOVERNED_WORKER_CONTRACT.md) before designing, implementing, dispatching, or claiming a worker transaction.
+- Workers execute already-judged bounded transactions; Road Warrior alone interprets Bruce, judges intent and ambiguity, sets priorities, defines completion, retains responsibility, and communicates with Bruce.
+- Do not implement a worker, dispatcher, queue, service, agent, or background runtime without separate explicit Bruce/ChatGPT authorization. Architecture approval is not implementation authority.
+- Do not claim durable acceptance unless a real execution mechanism has durably accepted the complete immutable transaction.
+- Do not treat a worker request, tool response, queue record, or structured result without authoritative readback as completion.
+- Prefer deterministic code for deterministic work. Do not create a general multi-agent architecture or allow a worker to become a competing judgment engine or source of truth.
+
 ## Change Discipline
 
 - Documentation and tests must be updated with implementation changes.
+- Governance, contract, and behavioral regression coverage must be updated together when worker boundaries change.
 - Run `powershell -NoProfile -ExecutionPolicy Bypass -File scripts/check_governance.ps1` after governance changes.
 - Do not modify external operational systems as an incidental part of repository work.
 - Do not commit or push automatically.

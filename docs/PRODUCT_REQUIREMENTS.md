@@ -1,11 +1,12 @@
 # Road Warrior Prototype 1 Product Requirements
 
-- Version: 1.5
-- Status: Approved authoritative frozen Prototype 1 requirements baseline, as amended
+- Version: 1.6
+- Status: Approved authoritative frozen Prototype 1 requirements baseline with approved V1.5 governed-worker direction, as amended
 - Date: 2026-08-18
 - Approved: Bruce and ChatGPT, 2026-08-13
 - Amendment: V1 obligation ownership approved by Bruce and ChatGPT, 2026-08-13
 - Synchronization amendment: local governance control plane and authoritative handoff location, 2026-08-18
+- V1.5 architecture amendment: Road Warrior control plane and governed worker execution plane, 2026-08-18
 - Readiness target: 2026-08-20
 - Field use begins: 2026-08-21
 
@@ -18,6 +19,8 @@ Road Warrior is a Cognitive Operating System. Its core value proposition is redu
 Prototype 1 validates the Cognitive Partnership: whether Road Warrior meaningfully reduces Bruce's cognitive load. It does not primarily validate voice or the driving experience.
 
 August 21 is a milestone for a credible, testable V1 baseline, not perfection or completion of later architecture.
+
+The approved V1.5 direction separates Road Warrior's singular judgment and conversational control plane from narrow governed workers that may later execute already-judged transactions. This approval does not authorize worker implementation or expand the August 21 Prototype 1 acceptance scope.
 
 ## Scope and Transports
 
@@ -47,8 +50,26 @@ Judgment determines the appropriate next action.
 
 - For noticeable-duration work, Road Warrior must use `Accept → Signal → Execute → Close`.
 - Road Warrior must briefly indicate what it accepted and that work is being performed when real execution is occurring.
-- Road Warrior must explicitly report completion, blockage, or required input.
+- Road Warrior must explicitly report completion for direct noticeable-duration work and must always report blockage or required input. Routine governed-worker success follows the closure rule below.
 - Road Warrior must not imply background or continuing execution unless real execution is occurring.
+- If an approved governed-worker path later exists, Road Warrior may acknowledge accepted responsibility before transaction completion only after a real execution mechanism has durably accepted the complete bounded transaction.
+- Durable acceptance is not completion. Road Warrior retains responsibility until verified completion or explicit return/failure handling, and false acceptance is prohibited.
+- Routine verified worker success need not interrupt Bruce merely to announce plumbing. Road Warrior decides whether to close briefly during natural interaction, silently, or through a later approved low-salience mechanism. Workers never communicate directly with Bruce.
+
+### V1.5 Governed Worker Architecture
+
+- Road Warrior remains the singular executive judgment engine and conversational relationship with Bruce. Workers execute; Road Warrior judges.
+- Road Warrior alone interprets Bruce, determines ambiguity and authority, orders dependencies, sets priorities, defines completion, owns accepted obligations, determines materiality, changes governance, and chooses human-facing communication.
+- A worker is a narrow, bounded, preferably deterministic executor governed by `GOVERNED_WORKER_CONTRACT.md`.
+- A worker receives an immutable already-judged transaction, performs only its exact authorized operations, protects authoritative artifacts, independently verifies the result, and returns structured evidence to Road Warrior.
+- A worker must return `requires_judgment` rather than infer a missing or conflicting material field.
+- A worker must be idempotent, use stable resource IDs, protect against concurrent stale writes, and reconcile ambiguous side effects through authoritative readback rather than blind retry.
+- Workers must not interpret Bruce, broaden authority, choose priorities, redefine completion, change governance, communicate directly with Bruce, or become competing judgment engines or sources of truth.
+- Prefer deterministic code for deterministic work. A general multi-agent architecture is not approved.
+- The first conceptual proof candidate is one Obligation Worker. The proof requires separate authorization and must establish contract enforcement, authority, idempotency, concurrency safety, read/write verification, and failure semantics before any further worker is considered.
+- A synchronous proof is useful for transaction safety but does not prove the desired conversational experience. If it materially blocks conversational continuity, that evidence may justify later evaluation of a durable background execution substrate.
+- No queue, service, agent, MCP surface, local runtime, hosted runtime, or other infrastructure is selected or authorized by this amendment.
+- If detached execution is later justified, the target must not depend on Bruce's Windows computer remaining awake.
 
 ### Zero Assumptions
 
@@ -113,6 +134,9 @@ The summary must be concise. Capture, obligation handling, and any external surf
 - Responsibility must transfer only when Road Warrior has enough understanding and capability to accept it honestly.
 - Storage, delivery, external action, synchronization, and completion claims require evidence from the resulting authoritative state; an attempted action or tool response alone is insufficient.
 - Adaptive Communication begins in V1 and remains a long-term requirement: Road Warrior should progressively adjust communication behavior from Bruce's explicit and observed feedback without converting isolated feedback into an unsupported universal assumption.
+- Conversational acknowledgment should feel immediate, with an approximate design target of one to two seconds where technically possible and occasional modest variance acceptable.
+- Acknowledgment latency must be measured separately from transaction-completion latency. Multi-minute blocking execution before acknowledgment is a product failure even when the eventual transaction succeeds.
+- Worker plumbing, logs, and structured evidence must not displace Road Warrior's voice or make Bruce monitor backend execution.
 
 ## Deferred and Optional Transports
 
@@ -129,6 +153,7 @@ Bidirectional WhatsApp is deferred from the August 21 requirement. SMS/Twilio ex
 - Obsidian implementation
 - Personal OS dashboard integration
 - Full autonomous multi-agent architecture
+- Governed worker implementation or production execution infrastructure without separate authorization and evidence
 - Production infrastructure
 
 Richer bidirectional cross-project context sharing is later architecture and research, not August 21 scope.

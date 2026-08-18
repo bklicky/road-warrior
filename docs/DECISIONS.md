@@ -1,6 +1,6 @@
 # Road Warrior Decision Log
 
-- Version: 2.0
+- Version: 2.1
 - Status: Living governance record
 - Updated: 2026-08-18
 
@@ -396,6 +396,7 @@ Each entry contains an ID, evidence-supported date, decision, rationale, consequ
 - RW-037 supersedes only the obligation-storage routing portion of RW-031. RW-031's Google Calendar notification role and rejection of ChatGPT Scheduled Tasks remain in force.
 - RW-041 supersedes the pre-August-21 attempt path in RW-017. WhatsApp/Twilio remains a later research candidate, not a core Prototype 1 requirement.
 - RW-044 supersedes only the repository-root storage-location portion of RW-028. RW-028's shared Markdown mechanism, ownership, structure, status flow, replaceability, and verification requirements remain in force.
+- RW-046 supersedes only RW-030's requirement that every noticeable-duration successful execution receive an explicit Bruce-facing completion message. Real acceptance and execution signaling, the prohibition on implied background work, verified completion, and explicit surfacing of failures, blockers, required judgment, and threatened obligations remain in force.
 
 ## Open Questions
 
@@ -429,3 +430,30 @@ Each entry contains an ID, evidence-supported date, decision, rationale, consequ
 - **Rationale:** Later verified operation had already established the shared Drive artifact as the cross-project surface, while the repository-root file still presented itself as an active ledger. Two live authorities create ambiguous writes, receipts, and completion claims.
 - **Consequences:** Producers and consumers use the exact Drive artifact and follow the repository protocol. Git history preserves the former root-ledger snapshot. A handoff remains `Pending` until the receiving project's durable incorporation and both required readbacks succeed; Bruce is not the courier.
 - **Status:** ACCEPTED — V1 AUTHORITY CLARIFICATION
+
+### RW-045 — Establish Road Warrior as the Control Plane and Governed Workers as the Execution Plane
+
+- **ID:** RW-045
+- **Date:** 2026-08-18
+- **Decision:** Road Warrior is the singular brain, executive judgment engine, control plane, and conversational relationship with Bruce. V1.5 may add narrow governed workers as a replaceable execution plane. Workers receive already-judged immutable transactions, execute only bounded authorized operations, independently verify authoritative results, and return structured evidence. Workers do not interpret Bruce, determine ambiguity, set priorities, broaden authority, redefine completion, change governance, or communicate directly with Bruce.
+- **Rationale:** Live regression testing showed that governed connector plumbing could consume roughly two and a half minutes and make the conversational surface unusably slow even when the selected mechanisms were correct. Separating execution plumbing protects Attention Continuity without diluting the scarce product asset: Road Warrior's accumulated judgment, voice, and relationship.
+- **Consequences:** `GOVERNED_WORKER_CONTRACT.md` is the canonical worker boundary. Prefer deterministic code for deterministic work. A general multi-agent architecture is not approved. Existing authoritative artifact identities and Road Warrior's logical ownership of obligations remain unchanged. The future Personal OS may display verified projections of Road Warrior-judged state, but workers and the dashboard do not create judgment or independently write authoritative obligation or handoff state.
+- **Status:** ACCEPTED — V1.5 ARCHITECTURE DIRECTION; NO WORKER IMPLEMENTATION AUTHORIZED
+
+### RW-046 — Separate Durable Acceptance From Verified Completion and Protect Conversational Latency
+
+- **ID:** RW-046
+- **Date:** 2026-08-18
+- **Decision:** Road Warrior may acknowledge accepted responsibility before a worker transaction finishes only after a real execution mechanism has durably accepted the complete bounded transaction. Durable acceptance is not completion, false acceptance is prohibited, and Road Warrior retains responsibility until verified completion or explicit return/failure handling. Routine verified success may close silently or through a low-salience mechanism when Bruce has moved on; Road Warrior decides human-facing communication, while failures, material changes, required judgment, and threats to an obligation surface appropriately.
+- **Rationale:** Bruce should be able to stop carrying an accepted responsibility without watching backend plumbing, but an immediate conversational response must not manufacture execution durability or completion.
+- **Consequences:** The acknowledgment design target is approximately one to two seconds where technically possible, with acknowledgment latency measured separately from transaction-completion latency. Multi-minute blocking execution before acknowledgment is a product failure. No current mechanism may be represented as durable background execution until that capability is independently verified. Workers return facts and evidence; they never decide whether or how Bruce is interrupted.
+- **Status:** ACCEPTED — V1.5 ATTENTION-CONTINUITY AND RESPONSIBILITY RULE
+
+### RW-047 — Admit Workers Individually Through Evidence, Starting With an Obligation Worker Proof
+
+- **ID:** RW-047
+- **Date:** 2026-08-18
+- **Decision:** The first worker candidate is one synchronous Obligation Worker proof. Before any detached-runtime decision, it must prove the worker boundary, immutable contract, authority enforcement, idempotency, concurrency safety, authoritative read/write verification, ambiguous-side-effect reconciliation, and structured failure semantics. Additional workers require individual evidence and governance admission.
+- **Rationale:** A synchronous proof can answer transaction-safety questions without assuming infrastructure. It cannot prove the desired non-blocking product experience; continued conversational blocking would be evidence that a durable dispatcher or background substrate has been earned.
+- **Consequences:** This decision does not authorize implementation of the proof. Separate Bruce/ChatGPT approval is required. No queue, service, agent, MCP/tool surface, local runtime, hosted runtime, or infrastructure is selected. If detached execution is later justified, the target should operate without Bruce's Windows computer remaining awake.
+- **Status:** ACCEPTED — EVIDENCE-GATED V1.5 SEQUENCING; PROOF NOT AUTHORIZED

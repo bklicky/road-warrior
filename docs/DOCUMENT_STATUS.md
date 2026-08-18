@@ -1,6 +1,6 @@
 # Road Warrior Document Status Manifest
 
-- Version: 1.0
+- Version: 1.1
 - Status: Canonical repository authority map
 - Date: 2026-08-18
 
@@ -34,6 +34,7 @@ Current verified reality comes first. Among documents, frozen outcomes and the C
 | `docs/DECISIONS.md` | Canonical | Living log of durable accepted and superseded decisions. |
 | `docs/PRODUCT_REQUIREMENTS.md` | Canonical | Approved Prototype 1 scope and acceptance baseline. |
 | `docs/JUDGMENT_ENGINE_V1.md` | Canonical | Approved V1 cognitive operating model. |
+| `docs/GOVERNED_WORKER_CONTRACT.md` | Canonical | Approved V1.5 worker authority, transaction, evidence, and implementation-boundary contract. |
 | `docs/VISION.md` | Living | Concise vision summary derived from the canonical Foundation. |
 | `docs/ARCHITECTURAL_PRINCIPLES.md` | Living | Evolving architecture principles constrained by frozen outcomes. |
 | `docs/ARCHITECTURE.md` | Living | Current system boundaries, components, and execution flow. |

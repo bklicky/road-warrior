@@ -55,6 +55,7 @@ $requiredFiles = @(
     'docs/ARCHITECTURE.md',
     'docs/PRODUCT_REQUIREMENTS.md',
     'docs/DECISIONS.md',
+    'docs/GOVERNED_WORKER_CONTRACT.md',
     'docs/IMPLEMENTATION_PLAN.md',
     'docs/CURRENT_STATE_CONTINUITY.md',
     'tests/behavioral_regressions.json'
@@ -78,7 +79,38 @@ Assert-Contains 'docs/PRODUCT_REQUIREMENTS.md' 'must not be used as a Road Warri
 Assert-Contains 'ROAD_WARRIOR_OPERATING_KERNEL.md' '## Verification Before Completion' 'VERIFICATION-BEFORE-COMPLETION'
 Assert-Contains 'docs/DECISIONS.md' '### RW-043' 'CONTROL-PLANE-DECISION'
 Assert-Contains 'docs/DECISIONS.md' '### RW-044' 'HANDOFF-AUTHORITY-DECISION'
+Assert-Contains 'docs/DECISIONS.md' '### RW-045' 'WORKER-CONTROL-PLANE-DECISION'
+Assert-Contains 'docs/DECISIONS.md' '### RW-046' 'DURABLE-ACCEPTANCE-DECISION'
+Assert-Contains 'docs/DECISIONS.md' '### RW-047' 'EVIDENCE-GATED-WORKER-DECISION'
 Assert-Contains 'docs/HORIZON.md' '### Deferred V2 Local-First Recommendation' 'V2-DEFERRED-RECOMMENDATION'
+Assert-Contains 'ROAD_WARRIOR_OPERATING_KERNEL.md' 'Workers execute; Road Warrior judges.' 'SINGULAR-JUDGMENT-ENGINE'
+Assert-Contains 'ROAD_WARRIOR_OPERATING_KERNEL.md' 'Durable acceptance is not completion, and false acceptance is prohibited.' 'FALSE-ACCEPTANCE-PROHIBITION'
+Assert-Contains 'docs/PRODUCT_REQUIREMENTS.md' 'approximate design target of one to two seconds' 'ACKNOWLEDGMENT-LATENCY'
+Assert-Contains 'docs/PRODUCT_REQUIREMENTS.md' 'Multi-minute blocking execution before acknowledgment is a product failure' 'BLOCKING-EXECUTION-FAILURE'
+Assert-Contains 'docs/JUDGMENT_ENGINE_V1.md' 'Road Warrior may delegate execution but never judgment.' 'JUDGMENT-ENGINE-PRESERVATION'
+Assert-Contains 'AGENTS.md' 'Architecture approval is not implementation authority.' 'NO-WORKER-IMPLEMENTATION-AUTHORITY'
+Assert-Contains 'docs/ARCHITECTURE.md' 'No worker, dispatcher, queue, background runtime, service, agent, or deployment exists or is authorized' 'WORKER-CAPABILITY-REALITY'
+Assert-Contains 'docs/IMPLEMENTATION_PLAN.md' 'V1.5 Obligation Worker Proof' 'OBLIGATION-WORKER-PROOF-BOUNDARY'
+Assert-Contains 'docs/HORIZON.md' 'dashboard must not independently redefine priorities or write authoritative obligation or handoff state' 'DASHBOARD-NON-AUTHORITY'
+
+foreach ($relativePath in @('ROAD_WARRIOR_OPERATING_KERNEL.md', 'AGENTS.md', 'README.md', 'docs/ARCHITECTURE.md', 'docs/PRODUCT_REQUIREMENTS.md', 'docs/DECISIONS.md', 'docs/DOCUMENT_STATUS.md', 'docs/IMPLEMENTATION_PLAN.md')) {
+    Assert-Contains $relativePath 'GOVERNED_WORKER_CONTRACT.md' 'WORKER-CONTRACT-ROUTING'
+}
+
+foreach ($needle in @(
+    'Workers execute. Road Warrior judges.',
+    'requires_judgment',
+    'transaction_id',
+    'outcome_unknown',
+    'False acceptance is prohibited.',
+    'Re-delivery of the same transaction must not create a duplicate',
+    'Never blindly retry an irreversible or externally visible action',
+    'no worker implementation authorized',
+    'should not depend on Bruce''s Windows computer remaining awake'
+)) {
+    Assert-Contains 'docs/GOVERNED_WORKER_CONTRACT.md' $needle 'WORKER-CONTRACT-INVARIANT'
+}
+Assert-NotContains 'docs/GOVERNED_WORKER_CONTRACT.md' 'worker may interpret Bruce' 'WORKER-NON-JUDGMENT'
 
 $handoffId = '1U4YvjjmwGAbspYwKo5dwlXd4NHbvSlnMdbWPPQYCGHc'
 foreach ($relativePath in @('ROAD_WARRIOR_OPERATING_KERNEL.md', 'ROAD_WARRIOR_HANDOFFS.md', 'docs/PRODUCT_REQUIREMENTS.md', 'docs/CURRENT_STATE_CONTINUITY.md', 'docs/DECISIONS.md')) {
@@ -145,7 +177,11 @@ if ($null -ne $fixture) {
         'RW-BEH-002-REMIND-ME',
         'RW-BEH-003-CROSS-PROJECT-HANDOFF',
         'RW-BEH-004-EXTERNAL-ACTIONS',
-        'RW-BEH-005-COMPLETION-CLAIMS'
+        'RW-BEH-005-COMPLETION-CLAIMS',
+        'RW-BEH-006-DURABLE-ACCEPTANCE',
+        'RW-BEH-007-WORKER-AUTHORITY',
+        'RW-BEH-008-WORKER-IDEMPOTENCY',
+        'RW-BEH-009-WORKER-CLOSURE'
     )
     $actualIds = @($fixture.cases | ForEach-Object { $_.id })
     foreach ($id in $expectedIds) {
@@ -164,7 +200,7 @@ if ($null -ne $fixture) {
     }
 
     $fixtureText = $fixture | ConvertTo-Json -Depth 10
-    foreach ($term in @('independently read', 'Google Calendar', 'ChatGPT Scheduled Tasks', 'Pending', 'Received', 'explicit draft', 'explicit send', 'authoritative state')) {
+    foreach ($term in @('independently read', 'Google Calendar', 'ChatGPT Scheduled Tasks', 'Pending', 'Received', 'explicit draft', 'explicit send', 'authoritative state', 'durably accepts', 'requires_judgment', 'transaction ID', 'idempotent', 'outcome_unknown', 'structured evidence', 'Attention Continuity')) {
         $assertionCount++
         if ($fixtureText -notmatch [regex]::Escape($term)) {
             $failures.Add("[BEHAVIORAL-FIXTURE] Expected governed behavior is absent: $term")
@@ -180,5 +216,5 @@ if ($failures.Count -gt 0) {
     exit 1
 }
 
-Write-Host "Governance checks PASSED: $assertionCount assertions across document consistency, links, manifest coverage, and 5 behavioral regression cases."
+Write-Host "Governance checks PASSED: $assertionCount assertions across document consistency, links, manifest coverage, and $(@($fixture.cases).Count) behavioral regression cases."
 exit 0

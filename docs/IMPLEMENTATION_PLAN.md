@@ -1,6 +1,6 @@
 # Road Warrior Prototype 1 Implementation Plan
 
-- Version: 1.7
+- Version: 1.8
 - Status: Active
 - Date: 2026-08-18
 - Readiness target: 2026-08-20
@@ -17,6 +17,7 @@ Statuses are limited to `NOT STARTED`, `IN PROGRESS`, `WAITING`, and `COMPLETE`.
 - Fresh-chat operational retrieval has passed; fresh-chat partnership/voice and reasoning/decision equivalence failed and are later research rather than an August 21 requirement.
 - Bidirectional WhatsApp is deferred from the August 21 requirement. True hands-free bidirectional in-car use is a known limitation and is not required for V1.
 - Current ordered priorities are: connect the Instagram/O.G. Bruce project to the shared handoff mechanism and verify `RW-HO-0001` incorporation; resolve the still-open Alexa/Zapier/ChatGPT test only from evidence; perform a mobile/headphones rehearsal using the existing persistent Road Warrior conversation; perform the final August 20 readiness rehearsal; and begin August 21 field use only after a go decision.
+- The V1.5 governed-worker architecture is approved as a direction only. It does not change current V1 priorities, authorize an Obligation Worker proof, or establish that durable/background dispatch is available.
 
 ## A. Repository Synchronization
 
@@ -133,3 +134,21 @@ Statuses are limited to `NOT STARTED`, `IN PROGRESS`, `WAITING`, and `COMPLETE`.
 - **Evidence:** `PHASE_2B_EXTERNAL_RECONCILIATION_EVIDENCE_2026-08-18.md`.
 - **Remaining work:** Connect the Instagram/O.G. Bruce project and verify `RW-HO-0001` incorporation; resolve the open Alexa/Zapier/ChatGPT test only from evidence; continue mobile/headphones and readiness testing.
 - **Status:** COMPLETE
+
+## O. V1.5 Governed Worker Architecture Approval — 2026-08-18
+
+- **Objective:** Durably separate Road Warrior's singular judgment and conversational control plane from narrow governed execution workers without changing frozen outcomes, the Judgment Engine taxonomy, existing authoritative-artifact identities, or current V1 implementation scope.
+- **Scope:** Durable decisions RW-045 through RW-047; Operating Kernel acceptance/dispatch/closure rules; current architecture; approved V1.5 product requirements; canonical `GOVERNED_WORKER_CONTRACT.md`; minimal Judgment Engine clarification; agent controls; future Personal OS boundary; implementation sequencing; and static regression coverage.
+- **Evidence required:** Cross-document consistency; explicit no-implementation boundary; worker non-authority; durable-acceptance and false-acceptance rules; separate acknowledgment/completion latency measures; idempotency, concurrency, verification, retry, and failure contracts; passing governance checks; reviewed diff; and current-state reconciliation by stable-ID readback.
+- **External boundary:** Only the derived `ROAD_WARRIOR_CURRENT_STATE.md` snapshot may be reconciled for this material approved decision. No obligation, handoff, Calendar, Gmail, dashboard, service, queue, worker, agent, or infrastructure mutation is authorized.
+- **Status:** COMPLETE
+
+## P. V1.5 Obligation Worker Proof — NOT AUTHORIZED
+
+- **Objective:** Prove one narrow synchronous Obligation Worker boundary before evaluating additional workers or detached execution infrastructure.
+- **Initial scope:** One already-judged immutable obligation transaction; contract validation; stable ledger ID; idempotency; serialized or equivalent concurrency protection; authoritative read-before-write and readback; ambiguous-side-effect reconciliation; structured evidence; and failure states returned to Road Warrior.
+- **Dependencies:** Separate explicit Bruce/ChatGPT implementation authorization; approved Phase O governance; verified connector capability; a reviewed proof design; and no destabilization of current V1 readiness.
+- **Evidence required:** No duplicate on repeated transaction; stale precondition blocked; no blind retry after ambiguous outcome; verified authoritative result; `requires_judgment` on missing material input; no worker-to-Bruce communication; measured acknowledgment and completion latency; and documented proof boundaries.
+- **Product boundary:** Synchronous success proves transaction safety, not non-blocking conversational continuity. Material blocking is evidence for later evaluation of a durable dispatcher/background substrate, not authority to build one.
+- **Runtime boundary:** No queue, service, agent, MCP/tool surface, local runtime, hosted runtime, or infrastructure is selected. Any detached target should later be evaluated against the requirement that Bruce's Windows computer need not remain awake.
+- **Status:** NOT STARTED — IMPLEMENTATION NOT AUTHORIZED
