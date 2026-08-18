@@ -66,7 +66,7 @@ Judgment determines the appropriate next action.
 - A worker must be idempotent, use stable resource IDs, protect against concurrent stale writes, and reconcile ambiguous side effects through authoritative readback rather than blind retry.
 - Workers must not interpret Bruce, broaden authority, choose priorities, redefine completion, change governance, communicate directly with Bruce, or become competing judgment engines or sources of truth.
 - Prefer deterministic code for deterministic work. A general multi-agent architecture is not approved.
-- The first conceptual proof candidate is one Obligation Worker. The proof requires separate authorization and must establish contract enforcement, authority, idempotency, concurrency safety, read/write verification, and failure semantics before any further worker is considered.
+- The first candidate was one Obligation Worker. Its separately authorized ledger-only proof established bounded contract enforcement, authority refusal, idempotency, single-writer concurrency protection, read/write verification, and failure semantics; evidence is in `OBLIGATION_WORKER_PROOF_2026-08-18.md`. No further worker or production use is authorized by that result.
 - A synchronous proof is useful for transaction safety but does not prove the desired conversational experience. If it materially blocks conversational continuity, that evidence may justify later evaluation of a durable background execution substrate.
 - No queue, service, agent, MCP surface, local runtime, hosted runtime, or other infrastructure is selected or authorized by this amendment.
 - If detached execution is later justified, the target must not depend on Bruce's Windows computer remaining awake.

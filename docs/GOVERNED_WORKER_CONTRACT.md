@@ -1,13 +1,13 @@
 # Road Warrior Governed Worker Contract
 
 - Version: 1.0
-- Status: Canonical V1.5 architecture contract; no worker implementation authorized
+- Status: Canonical V1.5 architecture contract; one bounded synchronous proof verified; no production worker runtime is authorized
 - Date: 2026-08-18
 - Approved: Bruce and ChatGPT, 2026-08-18
 
 ## Purpose
 
-This contract defines the authority boundary and transaction rules for any future Road Warrior governed worker. It approves an execution-plane architecture, not a worker, dispatcher, queue, service, agent, or deployment.
+This contract defines the authority boundary and transaction rules for any Road Warrior governed worker. It governs the separately authorized bounded Obligation Worker proof, but does not authorize a production worker, dispatcher, queue, service, agent, or deployment.
 
 The governing rule is:
 
@@ -58,7 +58,8 @@ Every worker request must be immutable, versioned, and bounded. It contains at m
 | Field | Requirement |
 | --- | --- |
 | `contract_version` | Worker-contract version used to validate the request. |
-| `transaction_id` | Globally unique stable transaction identifier and idempotency key. |
+| `transaction_id` | Globally unique stable transaction identifier. |
+| `idempotency_key` | Stable key used to recognize re-delivery without duplicating an operation. |
 | `intent_type` | Intent already judged by Road Warrior. |
 | `accepted_responsibility` | Exact responsibility Road Warrior owns. |
 | `authority` | Evidence and boundaries of the user's authorization. |
@@ -149,9 +150,9 @@ A tool response, request acceptance, local plan, or worker claim without authori
 
 ## Admission and Implementation Boundary
 
-- The first candidate is one Obligation Worker proof.
-- The proof must first establish authority, contract validation, idempotency, concurrency safety, read/write verification, and failure semantics.
-- The proof is not authorized by this document. It requires separate Bruce/ChatGPT approval.
+- The first candidate was one Obligation Worker proof.
+- Bruce/ChatGPT separately authorized only the controlled ledger-only proof on 2026-08-18; its evidence is `OBLIGATION_WORKER_PROOF_2026-08-18.md`.
+- That proof established the bounded contract, authority refusal, idempotency, single-writer stale-state protection, read/write verification, ambiguous-outcome reconciliation, and failure semantics. It did not establish production readiness, durable dispatch, detached execution, or fast conversational acknowledgment.
 - Additional worker types require individual evidence and durable governance admission.
 - A general multi-agent architecture is not approved.
 - Prefer deterministic code for deterministic work; do not choose an agent merely because one is available.

@@ -56,9 +56,12 @@ $requiredFiles = @(
     'docs/PRODUCT_REQUIREMENTS.md',
     'docs/DECISIONS.md',
     'docs/GOVERNED_WORKER_CONTRACT.md',
+    'docs/OBLIGATION_WORKER_PROOF_2026-08-18.md',
     'docs/IMPLEMENTATION_PLAN.md',
     'docs/CURRENT_STATE_CONTINUITY.md',
-    'tests/behavioral_regressions.json'
+    'tests/behavioral_regressions.json',
+    'tests/test_obligation_worker_proof.py',
+    'scripts/obligation_worker_proof.py'
 )
 
 foreach ($relativePath in $requiredFiles) {
@@ -89,8 +92,14 @@ Assert-Contains 'docs/PRODUCT_REQUIREMENTS.md' 'approximate design target of one
 Assert-Contains 'docs/PRODUCT_REQUIREMENTS.md' 'Multi-minute blocking execution before acknowledgment is a product failure' 'BLOCKING-EXECUTION-FAILURE'
 Assert-Contains 'docs/JUDGMENT_ENGINE_V1.md' 'Road Warrior may delegate execution but never judgment.' 'JUDGMENT-ENGINE-PRESERVATION'
 Assert-Contains 'AGENTS.md' 'Architecture approval is not implementation authority.' 'NO-WORKER-IMPLEMENTATION-AUTHORITY'
-Assert-Contains 'docs/ARCHITECTURE.md' 'No worker, dispatcher, queue, background runtime, service, agent, or deployment exists or is authorized' 'WORKER-CAPABILITY-REALITY'
+Assert-Contains 'docs/ARCHITECTURE.md' 'No dispatcher, queue, background runtime, production worker, service, agent, or deployment exists or is authorized.' 'WORKER-CAPABILITY-REALITY'
 Assert-Contains 'docs/IMPLEMENTATION_PLAN.md' 'V1.5 Obligation Worker Proof' 'OBLIGATION-WORKER-PROOF-BOUNDARY'
+Assert-Contains 'docs/IMPLEMENTATION_PLAN.md' 'SYNCHRONOUS LEDGER-ONLY SAFETY PROOF; NO PRODUCTION OR BACKGROUND AUTHORITY' 'OBLIGATION-WORKER-PROOF-RESULT'
+Assert-Contains 'docs/OBLIGATION_WORKER_PROOF_2026-08-18.md' 'controlled single-writer scope' 'OBLIGATION-WORKER-CONCURRENCY-LIMIT'
+Assert-Contains 'docs/OBLIGATION_WORKER_PROOF_2026-08-18.md' 'does not prove or authorize production use, detached/background execution, durable dispatch' 'OBLIGATION-WORKER-NON-CLAIMS'
+Assert-Contains 'scripts/obligation_worker_proof.py' 'TARGET_RESOURCE_ID = "1sy1jB1MECL-DTDdd4s7Q7K2_cgTnWT94"' 'OBLIGATION-WORKER-STABLE-TARGET'
+Assert-Contains 'scripts/obligation_worker_proof.py' 'REQUIRED_FORBIDDEN_ACTIONS' 'OBLIGATION-WORKER-SCOPE-BOUNDARY'
+Assert-Contains 'tests/test_obligation_worker_proof.py' 'test_e_ambiguous_outcome_reads_before_retry_and_does_not_duplicate' 'OBLIGATION-WORKER-AMBIGUOUS-OUTCOME-TEST'
 Assert-Contains 'docs/HORIZON.md' 'dashboard must not independently redefine priorities or write authoritative obligation or handoff state' 'DASHBOARD-NON-AUTHORITY'
 
 foreach ($relativePath in @('ROAD_WARRIOR_OPERATING_KERNEL.md', 'AGENTS.md', 'README.md', 'docs/ARCHITECTURE.md', 'docs/PRODUCT_REQUIREMENTS.md', 'docs/DECISIONS.md', 'docs/DOCUMENT_STATUS.md', 'docs/IMPLEMENTATION_PLAN.md')) {
@@ -105,7 +114,7 @@ foreach ($needle in @(
     'False acceptance is prohibited.',
     'Re-delivery of the same transaction must not create a duplicate',
     'Never blindly retry an irreversible or externally visible action',
-    'no worker implementation authorized',
+    'no production worker runtime is authorized',
     'should not depend on Bruce''s Windows computer remaining awake'
 )) {
     Assert-Contains 'docs/GOVERNED_WORKER_CONTRACT.md' $needle 'WORKER-CONTRACT-INVARIANT'

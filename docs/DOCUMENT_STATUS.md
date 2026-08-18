@@ -51,5 +51,6 @@ Current verified reality comes first. Among documents, frozen outcomes and the C
 | `docs/PHASE_C_CAPABILITY_EVIDENCE_2026-08-14.md` | Historical | Dated capability and continuity evidence. |
 | `docs/PHASE_C_CAPABILITY_EVIDENCE_2026-08-17.md` | Historical | Dated handoff and SMS capability evidence. |
 | `docs/PHASE_2B_EXTERNAL_RECONCILIATION_EVIDENCE_2026-08-18.md` | Historical | Dated verified external-reconciliation evidence and explicit evidence limits. |
+| `docs/OBLIGATION_WORKER_PROOF_2026-08-18.md` | Historical | Dated bounded Obligation Worker transaction-safety proof and evidence limits. |
 
 Non-Markdown fixtures and scripts under `tests/` and `scripts/` are verification assets, not governing documents.

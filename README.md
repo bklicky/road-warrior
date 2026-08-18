@@ -23,6 +23,7 @@ Road Warrior is a Cognitive Operating System intended to reduce cognitive load t
 | Prototype 1 scope and acceptance | [Product Requirements](docs/PRODUCT_REQUIREMENTS.md) |
 | Current architecture and execution flow | [Architecture](docs/ARCHITECTURE.md) |
 | Governed worker authority and transaction contract | [Governed Worker Contract](docs/GOVERNED_WORKER_CONTRACT.md) |
+| Bounded Obligation Worker proof evidence | [Obligation Worker Proof — 2026-08-18](docs/OBLIGATION_WORKER_PROOF_2026-08-18.md) |
 | Active sequencing and evidence requirements | [Implementation Plan](docs/IMPLEMENTATION_PLAN.md) |
 | Operational continuity mechanism | [Current-State Continuity](docs/CURRENT_STATE_CONTINUITY.md) |
 | Cross-project routing protocol | [Handoff Protocol](ROAD_WARRIOR_HANDOFFS.md) |

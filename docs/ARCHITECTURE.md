@@ -1,7 +1,7 @@
 # Road Warrior Architecture
 
 - Version: 1.1
-- Status: Current V1 architecture with approved V1.5 governed-worker direction; no worker implementation authorized
+- Status: Current V1 architecture with one verified bounded V1.5 Obligation Worker proof; no production worker runtime authorized
 - Date: 2026-08-18
 
 Road Warrior is a Cognitive Operating System whose core is judgment and responsibility, not a particular interface, model, connector, or storage product. This architecture implements the frozen outcomes of Cognitive Freedom and Attention Continuity through a small governed control loop and explicit authoritative records.
@@ -22,7 +22,7 @@ Conversation on an approved transport
 
 The cognitive partnership is the front end. Road Warrior, the Judgment Engine, and the Operating Kernel form the singular control plane. Governed workers are a replaceable execution plane around that brain. Connectors, applications, and any future runtime remain implementation mechanisms. Repository governance and named operational artifacts provide durable authority and evidence.
 
-The worker direction is approved architecture only. No worker, dispatcher, queue, background runtime, service, agent, or deployment exists or is authorized by this document.
+The architecture direction did not itself authorize implementation. A separately authorized, synchronous, ledger-only Obligation Worker proof now exists and is verified. No dispatcher, queue, background runtime, production worker, service, agent, or deployment exists or is authorized.
 
 ## System Boundaries
 
@@ -37,7 +37,7 @@ The worker direction is approved architecture only. No worker, dispatcher, queue
 
 - Road Warrior remains the singular executive judgment engine and conversational relationship with Bruce.
 - Workers execute already-judged immutable transactions under `GOVERNED_WORKER_CONTRACT.md`; they do not interpret Bruce or exercise independent product judgment.
-- One Obligation Worker is the first conceptual proof candidate. It requires separate authorization and evidence before implementation.
+- One bounded Obligation Worker proof was separately authorized and verified; it is evidence about transaction safety only, not a production capability.
 - Additional workers are admitted individually only after evidence justifies them.
 - Deterministic code is preferred for deterministic work; a general multi-agent architecture is not approved.
 - True detached execution, if later justified, should not depend on Bruce's Windows computer remaining awake. No runtime substrate is selected.
@@ -77,7 +77,7 @@ The worker direction is approved architecture only. No worker, dispatcher, queue
 | Verification layer | Independently read back authoritative state before a completion claim. | Evidence, receipts, and capability records. |
 | Road Warrior control plane | Judge intent, ambiguity, authority, priority, dependencies, acceptance, completion, materiality, and human-facing communication. | Singular executive authority; never delegated to workers. |
 | Durable dispatcher | Future optional mechanism that durably accepts immutable transactions before early acknowledgment. | Approved interface boundary only; no implementation selected or available. |
-| Governed worker | Execute one narrow transaction, protect authoritative state, verify the result, and return structured evidence. | `GOVERNED_WORKER_CONTRACT.md`; no worker currently authorized. |
+| Governed worker | Execute one narrow transaction, protect authoritative state, verify the result, and return structured evidence. | `GOVERNED_WORKER_CONTRACT.md`; one synchronous ledger-only proof is verified, with no production runtime authority. |
 | Worker evidence result | Return per-operation state, authoritative IDs and versions, readback evidence, retries, errors, and unresolved boundaries. | Evidence for Road Warrior judgment; not a competing source of truth. |
 
 ## Data and Control Flows
@@ -143,5 +143,5 @@ Acknowledgment latency and transaction-completion latency are separate measures.
 - **Change discipline:** frozen outcomes remain stable, historical evidence remains intact, current governance is synchronized, and tests accompany behavior changes.
 - **Deferred evolution:** the V2 local-first handoff recommendation is recorded in `HORIZON.md`; it is not implemented by this architecture.
 - **Worker contract:** authority, transaction, idempotency, concurrency, retry, artifact-protection, and evidence rules are canonical in `GOVERNED_WORKER_CONTRACT.md`.
-- **No authority by availability:** architecture approval and tool availability do not authorize a worker proof or make background execution real.
+- **No authority by availability:** the bounded proof's existence does not authorize another worker, production use, or background execution.
 - **Conversational continuity:** worker plumbing and logs remain off the human-facing surface; Road Warrior alone acknowledges, challenges, and closes in its established voice.
