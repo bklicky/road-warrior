@@ -1,8 +1,8 @@
 # Road Warrior Prototype 1 Implementation Plan
 
-- Version: 1.6
+- Version: 1.7
 - Status: Active
-- Date: 2026-08-14
+- Date: 2026-08-18
 - Readiness target: 2026-08-20
 - Field use begins: 2026-08-21
 
@@ -16,7 +16,7 @@ Statuses are limited to `NOT STARTED`, `IN PROGRESS`, `WAITING`, and `COMPLETE`.
 - The existing persistent Road Warrior conversation is the primary V1 conversational continuity mechanism across desktop, phone/mobile, and headphones/voice. `ROAD_WARRIOR_CURRENT_STATE.md` remains the operational checkpoint and recovery/orientation support, not a replacement for the living partnership.
 - Fresh-chat operational retrieval has passed; fresh-chat partnership/voice and reasoning/decision equivalence failed and are later research rather than an August 21 requirement.
 - Bidirectional WhatsApp is deferred from the August 21 requirement. True hands-free bidirectional in-car use is a known limitation and is not required for V1.
-- Current ordered priorities are: perform a mobile/headphones rehearsal using the existing persistent Road Warrior conversation; reconcile only defects demonstrated through use and continue convergence; perform the final August 20 readiness rehearsal; and begin August 21 field use after a go decision.
+- Current ordered priorities are: connect the Instagram/O.G. Bruce project to the shared handoff mechanism and verify `RW-HO-0001` incorporation; resolve the still-open Alexa/Zapier/ChatGPT test only from evidence; perform a mobile/headphones rehearsal using the existing persistent Road Warrior conversation; perform the final August 20 readiness rehearsal; and begin August 21 field use only after a go decision.
 
 ## A. Repository Synchronization
 
@@ -40,7 +40,7 @@ Statuses are limited to `NOT STARTED`, `IN PROGRESS`, `WAITING`, and `COMPLETE`.
 - **Dependencies:** Phase B.
 - **Evidence rule:** Phase C discovers actual capability boundaries. A repeatably verified result such as `AVAILABLE`, `UNAVAILABLE`, `UNRELIABLE`, `CONFIRMATION-REQUIRED`, or another honestly documented bounded result is valid Phase C evidence; a capability does not have to work for its test to be completed successfully. Completing a capability test does not automatically satisfy later Prototype 1 functional requirements, acceptance criteria, or field-readiness requirements.
 - **Evidence required:** Repeatable test results recording configuration, observed behavior, failures, confirmation requirements, and capability boundaries for ChatGPT, Google Drive, Gmail authorization and confirmation behavior, Google Calendar timed-obligation and notification behavior, direct Google Tasks execution, desktop, mobile, and relevant voice behavior; preservation of the ChatGPT Scheduled Tasks rejection and observed failure boundary; and bounded end-to-end evidence for durable obligation capture, contextual association, retrieval, surfacing, natural-language completion, status maintenance, and authorized reconciliation with an external notification artifact.
-- **Evidence to date:** Direct Google Tasks execution is `UNAVAILABLE`. Initial obligation-ledger plumbing is `AVAILABLE` for Markdown creation, in-place update, and immediate independent readback through the current Codex Google Drive connector. Google Calendar timed notification/surfacing has basic positive evidence. Gmail read-side intelligence and explicitly authorized promotional-email deletion have basic positive reported evidence. Drive search and read/discovery of the shared handoff artifact are `AVAILABLE`; automatic receiving-project consumption remains unproven. The canonical `ROAD_WARRIOR_CURRENT_STATE.md` Drive artifact has been created and independently read back, and a configured fresh chat successfully retrieved its operational state. The same test did not reproduce partnership/voice or reasoning/decision continuity and therefore did not replace the persistent conversation. The `RoadWarrior` Drive folder is verified as the parent of the current-state, handoff, obligation, and mind-map artifacts without changing their file IDs; it is now the default operational storage/retrieval boundary. Later-session and cross-transport obligation retrieval, open-obligation reporting, natural-language completion and ledger update, timed obligation-to-Calendar reconciliation, and mobile/headphones rehearsal remain unproven. See `PHASE_C_CAPABILITY_EVIDENCE_2026-08-13.md` and `PHASE_C_CAPABILITY_EVIDENCE_2026-08-14.md`.
+- **Evidence to date:** Direct Google Tasks execution is `UNAVAILABLE`. Initial obligation-ledger plumbing is `AVAILABLE` for Markdown creation, in-place update, and immediate independent readback through the current Codex Google Drive connector. Google Calendar timed notification/surfacing has basic positive evidence. Gmail read-side intelligence and explicitly authorized promotional-email deletion have basic positive reported evidence. Drive search and read/discovery of the shared handoff artifact are `AVAILABLE`. Bounded receiving-project consumption, durable incorporation, readback verification, and receipt acknowledgment are proven for Guitar and Baking; natural first-message-of-day trigger reliability beyond those examples remains under test. The canonical `ROAD_WARRIOR_CURRENT_STATE.md` Drive artifact has been created and independently read back, and a configured fresh chat successfully retrieved its operational state. The same test did not reproduce partnership/voice or reasoning/decision continuity and therefore did not replace the persistent conversation. The `RoadWarrior` Drive folder is verified as the parent of the current-state, handoff, obligation, and mind-map artifacts without changing their file IDs; it is now the default operational storage/retrieval boundary. Later-session and cross-transport obligation retrieval, open-obligation reporting, natural-language completion and ledger update, timed obligation-to-Calendar reconciliation, and mobile/headphones rehearsal remain unproven. See the Phase C evidence records dated 2026-08-13, 2026-08-14, and 2026-08-17.
 - **Status:** IN PROGRESS
 
 ## D. Judgment Specification
@@ -70,8 +70,8 @@ Statuses are limited to `NOT STARTED`, `IN PROGRESS`, `WAITING`, and `COMPLETE`.
 - **Objective:** Determine how much project, person, and thread continuity Prototype 1 can preserve; test contextual recall against authoritative artifacts; and test the shared Markdown handoff ledger from Road Warrior creation through receiving-project acknowledgment, without requiring Bruce to reconstruct or relay prior work.
 - **Dependencies:** Phases C, D, E, and a stable core loop from Phase F.
 - **Evidence required:** Scenario results across representative contexts; comparison of recalled context with an authoritative artifact when exactness matters; at least one addressed handoff observed moving from `Pending` to `Received` after incorporation by the receiving project; documented pickup, acknowledgment, continuity gaps, and recovery behavior; and an evidence-based Prototype 1 boundary.
-- **Evidence to date:** Native fresh-chat continuity is strong for identity and history but insufficient for authoritative current operational state without the thin bootstrap. With the configured `ROAD_WARRIOR_CURRENT_STATE.md` source and retrieval rule, fresh-chat operational orientation passed. Partnership/voice continuity, reasoning/decision continuity, and overall replacement of the persistent Road Warrior conversation failed; fresh-chat equivalence is not an August 21 requirement. The persistent conversation is the primary V1 conversational continuity mechanism. Drive-based handoff search and read/discovery are proven in the current connector context; automatic consumer incorporation and acknowledgment remain unproven and are not the immediate next action. See `CURRENT_STATE_CONTINUITY.md` and `PHASE_C_CAPABILITY_EVIDENCE_2026-08-14.md`.
-- **Status:** NOT STARTED
+- **Evidence to date:** Native fresh-chat continuity is strong for identity and history but insufficient for authoritative current operational state without the thin bootstrap. With the configured `ROAD_WARRIOR_CURRENT_STATE.md` source and retrieval rule, fresh-chat operational orientation passed. Partnership/voice continuity, reasoning/decision continuity, and overall replacement of the persistent Road Warrior conversation failed; fresh-chat equivalence is not an August 21 requirement. The persistent conversation is the primary V1 conversational continuity mechanism. Drive-based handoff search and read/discovery are proven in the current connector context. Bounded consumer incorporation, deduplication, readback verification, and acknowledgment are proven for Guitar and Baking. Two reserved handoffs remain evidence targets for natural first-message-of-day trigger behavior, so broader end-to-end reliability is not complete. See `CURRENT_STATE_CONTINUITY.md` and the Phase C evidence records dated 2026-08-14 and 2026-08-17.
+- **Status:** IN PROGRESS
 
 ## H. Communication-Return Testing
 
@@ -116,3 +116,20 @@ Statuses are limited to `NOT STARTED`, `IN PROGRESS`, `WAITING`, and `COMPLETE`.
 - Two new Pending handoffs (`RW-HO-0004` Guitar and `RW-HO-0005` Baking) are reserved for a natural first-message-of-day trigger test on the next calendar day.
 - Twilio SMS has moved from abstract stretch research to an active optional transport experiment. Basic two-way SMS is proven, the Road Warrior Twilio Function is deployed, the permanent number `+1 805-600-2358` is acquired, and A2P campaign review is pending. SMS remains non-required for August 21 and must not destabilize core readiness.
 - See `PHASE_C_CAPABILITY_EVIDENCE_2026-08-17.md`.
+
+## M. Phase 1 Repository Governance Repair — 2026-08-18
+
+- **Objective:** Install a local repository control plane that enforces existing values and accepted behavior without changing the frozen philosophy or mutating external systems.
+- **Scope:** Operating Kernel, mandatory agent preflight, README authority map, document-status manifest, current architecture, current-document reconciliation, handoff protocol pointer, deferred V2 recommendation, and lightweight consistency/behavioral regression checks.
+- **Evidence required:** Every repository document reviewed before editing; historical decision and evidence text preserved; local checks pass; changed-file diff reviewed; no external writes, commit, or push.
+- **External boundary:** Phase 1 itself did not mutate external systems. The separately authorized Phase 2B reconciliation was completed and verified afterward.
+- **Status:** COMPLETE
+
+## N. Phase 2B External Reconciliation — 2026-08-18
+
+- **Objective:** Reconcile the operational Drive, Calendar, Scheduled Task, handoff, ChatGPT Project, and current-state surfaces with the accepted repository governance while preserving stable identities and historical evidence.
+- **Scope:** Obligation-ledger statuses and Calendar links; two baking Calendar events; unchanged Tirzepatide series; terminal Call Steph state; paused duplicate Scheduled Tasks; synchronized live handoff protocol; `RW-HO-0001` connector dependency; governed ChatGPT Project instructions; Project source-list audit; current-state refresh.
+- **Evidence required:** Explicit authorization, authoritative-surface readback after every mutation, stable IDs preserved, no deletion, and no completion claim beyond the observed evidence.
+- **Evidence:** `PHASE_2B_EXTERNAL_RECONCILIATION_EVIDENCE_2026-08-18.md`.
+- **Remaining work:** Connect the Instagram/O.G. Bruce project and verify `RW-HO-0001` incorporation; resolve the open Alexa/Zapier/ChatGPT test only from evidence; continue mobile/headphones and readiness testing.
+- **Status:** COMPLETE

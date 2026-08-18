@@ -1,15 +1,18 @@
 # Road Warrior Decision Log
 
-- Version: 1.9
+- Version: 2.0
 - Status: Living governance record
-- Updated: 2026-08-14
+- Updated: 2026-08-18
 
 This log records accepted product, architecture, and working-governance decisions. A decision remains in force until explicitly superseded. Unresolved implementation mechanisms remain open and are not converted into decisions here.
 
 ## Document Authority
 
+- `FOUNDATION.md` and `CONSTITUTION.md` govern frozen human outcomes and constitutional commitments.
 - Current `DECISIONS.md` governs durable approved decisions.
 - `PRODUCT_REQUIREMENTS.md` governs Prototype 1 scope and acceptance requirements.
+- The repository-root `ROAD_WARRIOR_OPERATING_KERNEL.md` compiles mandatory operational enforcement but cannot silently amend frozen outcomes, accepted decisions, or requirements.
+- `DOCUMENT_STATUS.md` classifies document roles and conflict handling.
 - `IMPLEMENTATION_PLAN.md` governs active phase sequencing and evidence requirements.
 - Older dated milestone documents, workflows, architecture records, and specialized test protocols remain historical or specialized inputs and do not override those current authorities.
 
@@ -392,16 +395,37 @@ Each entry contains an ID, evidence-supported date, decision, rationale, consequ
 
 - RW-037 supersedes only the obligation-storage routing portion of RW-031. RW-031's Google Calendar notification role and rejection of ChatGPT Scheduled Tasks remain in force.
 - RW-041 supersedes the pre-August-21 attempt path in RW-017. WhatsApp/Twilio remains a later research candidate, not a core Prototype 1 requirement.
+- RW-044 supersedes only the repository-root storage-location portion of RW-028. RW-028's shared Markdown mechanism, ownership, structure, status flow, replaceability, and verification requirements remain in force.
 
-## Open Decisions
+## Open Questions
 
 - The verified Prototype 1 capability boundary for Google Drive, Gmail drafting and sending, desktop, mobile, and voice behavior. Direct Google Tasks execution is `UNAVAILABLE` and retained as Phase C evidence.
 
-### RW-042 � Use a Once-Per-Day Project Handoff Consumer Trigger
+## Accepted Decisions (continued)
+
+### RW-042 — Use a Once-Per-Day Project Handoff Consumer Trigger
 
 - **ID:** RW-042
 - **Date:** 2026-08-17
 - **Decision:** Participating projects consume Road Warrior handoffs on the first user message in that project each calendar day. Before responding, the project checks the exact shared `ROAD_WARRIOR_HANDOFFS` ledger for Pending entries unambiguously addressed to it. After a successful check, it does not check again that calendar day unless Bruce explicitly requests another Road Warrior-message check.
-- **Rationale:** The prior �open or meaningfully resume� trigger was ambiguous, while checking every user turn would impose unnecessary Drive latency. A deterministic once-per-calendar-day trigger preserves automatic pickup after Bruce has been away without making Bruce remember to request synchronization.
+- **Rationale:** The prior “open or meaningfully resume” trigger was ambiguous, while checking every user turn would impose unnecessary Drive latency. A deterministic once-per-calendar-day trigger preserves automatic pickup after Bruce has been away without making Bruce remember to request synchronization.
 - **Consequences:** There is no background monitoring or polling. Receiving projects remain responsible for durable incorporation, deduplication, verified readback, and acknowledgment only after success. Automatic background project invocation remains unproven and is not required for this V1 mechanism.
-- **Status:** ACCEPTED � V1 CROSS-PROJECT CONSUMER TRIGGER
+- **Status:** ACCEPTED — V1 CROSS-PROJECT CONSUMER TRIGGER
+
+### RW-043 — Establish the Repository Governance Control Plane
+
+- **ID:** RW-043
+- **Date:** 2026-08-18
+- **Decision:** Road Warrior uses a concise repository-root Operating Kernel, mandatory agent preflight, repository entry-point authority map, document-status manifest, current architecture, and executable governance regression checks as its local control plane.
+- **Rationale:** The governing philosophy and frozen outcomes are sound, but dispersed documents did not reliably enforce current obligation, handoff, authorization, verification, or completion rules.
+- **Consequences:** Governed actions must consult the Operating Kernel and the appropriate canonical source. The kernel compiles existing authority; it cannot silently amend frozen outcomes or historical evidence. Documentation and tests change together, and local repository work does not imply external-system synchronization.
+- **Status:** ACCEPTED — PHASE 1 GOVERNANCE ENFORCEMENT
+
+### RW-044 — Make the Shared Drive Artifact the Authoritative Live V1 Handoff Ledger
+
+- **ID:** RW-044
+- **Date:** 2026-08-18
+- **Decision:** The Google Drive artifact `ROAD_WARRIOR_HANDOFFS` with file ID `1U4YvjjmwGAbspYwKo5dwlXd4NHbvSlnMdbWPPQYCGHc` is the one authoritative live V1 handoff ledger. The repository-root `ROAD_WARRIOR_HANDOFFS.md` is the protocol and stable-location pointer, not a competing operational ledger.
+- **Rationale:** Later verified operation had already established the shared Drive artifact as the cross-project surface, while the repository-root file still presented itself as an active ledger. Two live authorities create ambiguous writes, receipts, and completion claims.
+- **Consequences:** Producers and consumers use the exact Drive artifact and follow the repository protocol. Git history preserves the former root-ledger snapshot. A handoff remains `Pending` until the receiving project's durable incorporation and both required readbacks succeed; Bruce is not the courier.
+- **Status:** ACCEPTED — V1 AUTHORITY CLARIFICATION
