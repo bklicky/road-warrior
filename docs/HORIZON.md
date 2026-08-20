@@ -1,8 +1,8 @@
 # Road Warrior Horizon
 
-- Version: 0.2
+- Version: 0.3
 - Status: Captured; not designed
-- Date: 2026-08-12
+- Date: 2026-08-18
 
 The Horizon records future possibilities without designing them.
 
@@ -35,7 +35,19 @@ Future research only.
 
 Later architecture and research only. This is not August 21 scope.
 
-Research how relevant context and information could move in both directions among Road Warrior and approved projects without Bruce acting as the courier. The V1 Markdown handoff ledger remains the current mechanism and must be reality-tested before richer sharing is designed.
+Research how relevant context and information could move in both directions among Road Warrior and approved projects without Bruce acting as the courier. The V1 shared Drive handoff ledger remains the current operational mechanism, governed by the repository-root protocol.
+
+### Deferred V2 Local-First Recommendation
+
+The recommended V2 direction is a local-first routing plane with:
+
+- one shared local Markdown handoff ledger as the inspectable operational record;
+- one repository-scoped routing skill that applies the same producer, consumer, target-filtering, deduplication, and acknowledgment rules across participating projects;
+- verified receipts that identify the receiving project and destination artifact and are written only after independent readback;
+- an optional watcher or bridge for event detection and transport, without moving judgment or authority into the watcher; and
+- Google Drive/mobile fallback for access when the local workspace is unavailable.
+
+V2 should preserve a single logical ledger, deterministic ownership, human readability, and replaceability. It must not create simultaneous local and Drive authorities without an explicit synchronization and conflict model. This is a recommendation for later design and reality testing, not permission to implement V2 now.
 
 ## Relational Knowledge Layer — V3/V4 Research
 
@@ -54,5 +66,13 @@ Road Warrior and the Judgment Engine may become the cognitive prioritization lay
 The surface should present judgment already formed from relevant context rather than require Bruce to create that judgment by manually managing static lists or Kanban classifications.
 
 **Principle:** “The dashboard should display judgment, not create it.”
+
+The approved governed-worker direction provides a future-compatible boundary without selecting a dashboard design:
+
+- workers may gather verified state and maintain derived projections;
+- Road Warrior alone determines salience, priority, meaning, and what deserves Bruce's attention;
+- the dashboard may display projections of that judged state;
+- dashboard actions return to Road Warrior as new intent; and
+- the dashboard must not independently redefine priorities or write authoritative obligation or handoff state.
 
 This is a V3 brainstorm and design direction, not a Prototype 1 requirement.

@@ -1,8 +1,8 @@
 # Road Warrior V1 Current-State Continuity
 
-- Version: 1.1
-- Status: Operational retrieval proven; persistent conversation is primary; fresh-chat equivalence deferred
-- Date: 2026-08-14
+- Version: 1.3
+- Status: Operational retrieval proven; persistent conversation is primary; Phase 2B external reconciliation verified
+- Date: 2026-08-18
 - Approved: Bruce and ChatGPT, 2026-08-14
 - Canonical artifact: `ROAD_WARRIOR_CURRENT_STATE.md`
 - Drive file ID: `1oIPOqyV-oBjFp6StIrnI6EdRHuP3FfON`
@@ -44,7 +44,7 @@ Conversation continuity preserves the living Road Warrior partnership; durable m
 | Artifact | Stable Drive ID | Stable link |
 | --- | --- | --- |
 | `ROAD_WARRIOR_CURRENT_STATE.md` | `1oIPOqyV-oBjFp6StIrnI6EdRHuP3FfON` | `https://drive.google.com/file/d/1oIPOqyV-oBjFp6StIrnI6EdRHuP3FfON/view?usp=drivesdk` |
-| `ROAD_WARRIOR_HANDOFFS` | `1U4YvjjmwGAbspYwKo5dwlXd4NHbvSlnMdbWPPQYCGHc` | `https://docs.google.com/document/d/1U4YvjjmwGAbspYwKo5dwlXd4NHbvSlnMdbWPPQYCGHc/edit?usp=drivesdk` |
+| `ROAD_WARRIOR_HANDOFFS` (authoritative live handoff ledger) | `1U4YvjjmwGAbspYwKo5dwlXd4NHbvSlnMdbWPPQYCGHc` | `https://docs.google.com/document/d/1U4YvjjmwGAbspYwKo5dwlXd4NHbvSlnMdbWPPQYCGHc/edit?usp=drivesdk` |
 | `ROAD_WARRIOR_OBLIGATIONS.md` | `1sy1jB1MECL-DTDdd4s7Q7K2_cgTnWT94` | `https://drive.google.com/file/d/1sy1jB1MECL-DTDdd4s7Q7K2_cgTnWT94/view?usp=drivesdk` |
 | `MIND MAP ROAD WARRIOR.pdf` | `1Wfmi722_0oXyuSzcLgrEoYji3oG-TwYg` | `https://drive.google.com/file/d/1Wfmi722_0oXyuSzcLgrEoYji3oG-TwYg/view?usp=drivesdk` |
 
@@ -55,12 +55,27 @@ Conversation continuity preserves the living Road Warrior partnership; durable m
 Authority and conflict order is:
 
 1. Current observed reality and verified external state.
-2. Approved repository governance for requirements and durable decisions.
-3. Repository implementation plans and evidence records for recorded status.
-4. `ROAD_WARRIOR_CURRENT_STATE.md` for derived operational orientation.
-5. Native Project memory for recognition and history.
+2. Frozen repository outcomes and constitutional commitments.
+3. Approved repository requirements and durable decisions.
+4. The repository Operating Kernel for compiled operational enforcement.
+5. Repository implementation plans and evidence records for recorded status.
+6. `ROAD_WARRIOR_CURRENT_STATE.md` for derived operational orientation.
+7. Native Project memory for recognition and history.
 
 A material conflict must be stated and resolved from the appropriate evidence. The snapshot cannot silently amend governance. A newer verified fact may expose stale documentation, but it must be labeled and reconciled rather than silently upgraded into governed truth.
+
+## Repository Control Plane and Reconciliation State
+
+`ROAD_WARRIOR_OPERATING_KERNEL.md`, `AGENTS.md`, and `DOCUMENT_STATUS.md` form the local enforcement and routing layer for repository work. Repository agents must consult the kernel before obligations, handoffs, external actions, authoritative-state changes, or completion claims.
+
+The separately authorized Phase 2B reconciliation completed on 2026-08-18. The obligation ledger, required Calendar surfacing, relevant Scheduled Task states, live handoff protocol, Road Warrior ChatGPT Project instructions, and current-state snapshot were updated or preserved as required and independently read back. Stable identities remained unchanged. The Project source list was verified empty; the concise kernel gate is embedded in Project instructions and explicitly does not claim automatic synchronization. See `PHASE_2B_EXTERNAL_RECONCILIATION_EVIDENCE_2026-08-18.md` for the bounded evidence.
+
+Ongoing reconciliation rules remain:
+
+- retrieve the current external artifact before proposing or performing an update;
+- preserve stable IDs and update in place only when explicitly authorized;
+- verify every external write by independent readback; and
+- record remaining conflicts or unavailable capabilities rather than inferring synchronization.
 
 ## Update Responsibility and Triggers
 

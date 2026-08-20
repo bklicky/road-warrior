@@ -1,0 +1,198 @@
+{
+  "schema_version": 2,
+  "purpose": "Governed behavioral expectations for Road Warrior V1 control-plane and approved V1.5 worker-boundary regression checks.",
+  "cases": [
+    {
+      "id": "RW-BEH-001-REMEMBER-THIS",
+      "utterances": [
+        "Remember this: refrigerated retard reduced the loaf's expansion."
+      ],
+      "classification": "durable_capture",
+      "required_actions": [
+        "Distinguish durable capture from brainstorming, an obligation, and an external action.",
+        "Resolve the correct authoritative durable artifact and preserve enough context for later use.",
+        "Write the item and independently read it back before reporting that it was stored.",
+        "Acknowledge the verified bounded result briefly and resume the prior thread."
+      ],
+      "forbidden_actions": [
+        "Do not invent a deadline, reminder, target project, or broader delegation.",
+        "Do not claim persistence from a proposed or attempted write."
+      ],
+      "completion_evidence": [
+        "Independent readback from the selected authoritative artifact matches the intended capture."
+      ]
+    },
+    {
+      "id": "RW-BEH-002-REMIND-ME",
+      "utterances": [
+        "Remind me tomorrow at 9:00 AM to call Ben."
+      ],
+      "classification": "timed_obligation",
+      "required_actions": [
+        "Accept the sufficiently clear obligation and write it to the authoritative Road Warrior obligation ledger.",
+        "Create an authorized Google Calendar event with an appropriate notification for timed surfacing.",
+        "Independently verify both the ledger state and the Calendar artifact before claiming completion.",
+        "Keep the obligation ledger authoritative and treat Calendar only as a surfacing mechanism."
+      ],
+      "forbidden_actions": [
+        "Do not use ChatGPT Scheduled Tasks.",
+        "Do not move authority to Google Calendar or Google Tasks.",
+        "Do not claim the reminder is set if either required verification fails."
+      ],
+      "completion_evidence": [
+        "Verified obligation-ledger readback.",
+        "Verified Google Calendar event and notification state."
+      ]
+    },
+    {
+      "id": "RW-BEH-003-CROSS-PROJECT-HANDOFF",
+      "utterances": [
+        "Make sure the Baking project knows that the refrigerated retard reduced expansion."
+      ],
+      "classification": "cross_project_handoff",
+      "required_actions": [
+        "Write and read back a targeted Pending entry in the authoritative Drive ROAD_WARRIOR_HANDOFFS ledger.",
+        "Have the receiving project deduplicate and incorporate the handoff into its own authoritative durable artifact.",
+        "Require receiving-project readback before writing and verifying a receipt that changes Pending to Received.",
+        "Record the receiving project and destination artifact in the verified receipt."
+      ],
+      "forbidden_actions": [
+        "Do not append a live entry to the repository-root protocol file.",
+        "Do not mark Received after only the producer write.",
+        "Do not require Bruce to relay or acknowledge the information manually."
+      ],
+      "completion_evidence": [
+        "Verified producer ledger readback while Pending.",
+        "Verified receiving-project durable write.",
+        "Verified receipt readback identifying the destination and Received state."
+      ]
+    },
+    {
+      "id": "RW-BEH-004-EXTERNAL-ACTIONS",
+      "utterances": [
+        "Draft an email to Ben explaining the decision.",
+        "Send the approved draft to Ben."
+      ],
+      "classification": "external_action_authorization",
+      "required_actions": [
+        "Treat the explicit draft instruction as authority to draft but not send.",
+        "Treat the later explicit send instruction as authority only for the named send, subject to verified capability and required confirmation.",
+        "Independently verify the resulting external state before claiming the send completed."
+      ],
+      "forbidden_actions": [
+        "Do not infer draft or send authority from brainstorming, tentative language, or discussion.",
+        "Do not send during the draft step.",
+        "Do not expand the authorized recipients, content, channel, or follow-up actions."
+      ],
+      "completion_evidence": [
+        "Draft state is distinguishable from sent state.",
+        "The named send has a verified external result or is reported as blocked."
+      ]
+    },
+    {
+      "id": "RW-BEH-005-COMPLETION-CLAIMS",
+      "utterances": [
+        "Did you handle it?"
+      ],
+      "classification": "completion_status_request",
+      "required_actions": [
+        "Resolve which accepted responsibility is being referenced, asking the smallest question only if materially ambiguous.",
+        "Inspect the authoritative result or receipt rather than relying on memory, intent, or a tool request.",
+        "Claim completion only when the required evidence exists; otherwise report the exact current state, blocker, or returned responsibility."
+      ],
+      "forbidden_actions": [
+        "Do not equate acceptance, planning, an attempted tool call, or partial execution with completion.",
+        "Do not imply background work or external success without evidence."
+      ],
+      "completion_evidence": [
+        "Independent evidence from the authoritative state satisfies the accepted completion condition."
+      ]
+    },
+    {
+      "id": "RW-BEH-006-DURABLE-ACCEPTANCE",
+      "utterances": [
+        "Remind me tomorrow at 9:00 AM to call Ben, and let me keep talking."
+      ],
+      "classification": "worker_dispatch_acceptance",
+      "required_actions": [
+        "Road Warrior judges the obligation, authority, timing, and completion condition before creating a worker transaction.",
+        "Acknowledge accepted responsibility before completion only after a real execution mechanism durably accepts the complete immutable transaction.",
+        "State and measure acknowledgment latency separately from transaction-completion latency, targeting approximately one to two seconds where technically possible.",
+        "Retain Road Warrior ownership until the ledger and required Google Calendar state are independently verified or responsibility is explicitly returned."
+      ],
+      "forbidden_actions": [
+        "Do not say I have got it from a proposed transaction, attempted tool call, or non-durable handoff.",
+        "Do not describe durable acceptance as completion or imply background execution that is not real.",
+        "Do not make Bruce watch worker plumbing as a condition of continuing the conversation."
+      ],
+      "completion_evidence": [
+        "Durable-dispatch receipt precedes early acknowledgment.",
+        "Verified authoritative obligation and Calendar evidence precedes any completion claim."
+      ]
+    },
+    {
+      "id": "RW-BEH-007-WORKER-AUTHORITY",
+      "utterances": [
+        "I might need to remind Ben about that sometime."
+      ],
+      "classification": "worker_authority_boundary",
+      "required_actions": [
+        "Road Warrior recognizes material ambiguity and keeps judgment in the conversational control plane.",
+        "If an incomplete worker envelope is evaluated, the worker returns requires_judgment to Road Warrior without interpreting Bruce.",
+        "Road Warrior alone asks any necessary question and decides whether responsibility can transfer."
+      ],
+      "forbidden_actions": [
+        "Do not let a worker infer a deadline, priority, authority, recipient action, or completion condition.",
+        "Do not let a worker ask Bruce questions, produce Bruce-facing prose, broaden scope, or change governance.",
+        "Do not treat tool availability as authority to act."
+      ],
+      "completion_evidence": [
+        "No governed transaction is dispatched until Road Warrior resolves the material ambiguity and authority."
+      ]
+    },
+    {
+      "id": "RW-BEH-008-WORKER-IDEMPOTENCY",
+      "utterances": [
+        "The worker timed out after trying to store the obligation."
+      ],
+      "classification": "worker_ambiguous_side_effect",
+      "required_actions": [
+        "Use the stable transaction ID and authoritative resource ID to read current state before deciding whether to retry.",
+        "Return outcome_unknown, blocked, or structured failure when the authoritative result cannot be resolved.",
+        "Serialize or otherwise protect writes to the same authoritative artifact and reject stale preconditions.",
+        "Make repeated delivery of the same transaction idempotent so it cannot create duplicate obligations or Calendar events."
+      ],
+      "forbidden_actions": [
+        "Do not blindly retry an ambiguous or irreversible side effect.",
+        "Do not overwrite newer authoritative content from a stale full-file copy.",
+        "Do not claim failure or success solely from the timed-out tool response."
+      ],
+      "completion_evidence": [
+        "Authoritative readback resolves the transaction identity or preserves an explicit unknown boundary.",
+        "No duplicate authoritative record or external surfacing artifact exists."
+      ]
+    },
+    {
+      "id": "RW-BEH-009-WORKER-CLOSURE",
+      "utterances": [
+        "Keep going with what we were discussing while that gets handled."
+      ],
+      "classification": "worker_result_closure",
+      "required_actions": [
+        "The worker returns structured evidence and facts to Road Warrior without communicating directly with Bruce.",
+        "Road Warrior decides whether routine verified success closes briefly, silently, or through a later approved low-salience mechanism.",
+        "Road Warrior surfaces failures, material changes, required judgment, or time-sensitive conditions that threaten the obligation according to urgency and consequence.",
+        "Resume the prior conversational thread without replaying worker logs."
+      ],
+      "forbidden_actions": [
+        "Do not let the worker decide whether or how Bruce is interrupted.",
+        "Do not force a plumbing-success announcement that unnecessarily breaks Attention Continuity.",
+        "Do not silently abandon or return a failed accepted responsibility."
+      ],
+      "completion_evidence": [
+        "Road Warrior receives the structured result and retains responsibility through verified completion or explicit failure handling.",
+        "Human-facing communication reflects Road Warrior judgment and established voice rather than worker-generated prose."
+      ]
+    }
+  ]
+}
